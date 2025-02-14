@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.6",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))})),document.addEventListener("DOMContentLoaded",(()=>{this.k()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}p(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.S(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.S(t.target,"rocket-onclick","onclick"),this.M()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.S(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.M()}O(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerWPRocketBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerWPRocketBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}D(){return new Promise((t=>{this.P?this.M=t:t()}))}C(){this.P=!0}M(){this.P=!1}S(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}k(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.T(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.j(this),this.F(this),this.I(),this.W(),this.q(),await this.A(this.delayedScripts.normal),await this.A(this.delayedScripts.defer),await this.A(this.delayedScripts.async);try{await this.U(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.D().then((()=>{this.O()})),this.N()}W(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed-network"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: data-uri blocked by CSP -> fallback"),t.removeAttribute("src"),this.B(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())})),s?(t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async A(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.A(t)):Promise.resolve()}q(){this.T([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}T(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o&&!o.startsWith("data:")){const s=document.createElement("link");s.href=o,s.rel=e,"preconnect"!==e&&(s.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(s.crossOrigin=!0),t.crossOrigin&&(s.crossOrigin=t.crossOrigin),t.integrity&&(s.integrity=t.integrity),i.appendChild(s),this.trash.push(s)}})),document.head.appendChild(i)}j(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function s(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),s(document,"onreadystatechange"),s(window,"onload"),s(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(t){const e=o.fn[t];o.fn[t]=o.fn.init.prototype[t]=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this}}o&&o.fn&&!t.allJQueries.includes(o)&&(o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])},s("on"),s("one"),t.allJQueries.push(o)),e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async U(){this.domReadyFired=!0;try{document.readyState="interactive"}catch(t){}await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){try{document.readyState="complete"}catch(t){}await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}I(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.p(t)}}RocketLazyLoadScripts.run()})();</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+
+	<!-- This site is optimized with the Yoast SEO plugin v24.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Obrigado! - TGL Solutions</title>
+	<meta name="description" content="Recebemos as informações sobre o seu projeto. Retornaremos o mais breve possível para conversamos sobre seu seu projeto. Importante: pode ser que nosso">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Obrigado! - TGL Solutions">
+	<meta property="og:description" content="Recebemos as informações sobre o seu projeto. Retornaremos o mais breve possível para conversamos sobre seu seu projeto. Importante: pode ser que nosso">
+	<meta property="og:url" content="https://www.tglsolutions.com.br/orcamento/enviado/">
+	<meta property="og:site_name" content="Fante">
+	<meta property="article:modified_time" content="2024-08-15T17:41:22+00:00">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:label1" content="Est. tempo de leitura">
+	<meta name="twitter:data1" content="1 minuto">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.agenciafante.com.br/orcamento/enviado/","url":"https://www.agenciafante.com.br/orcamento/enviado/","name":"Obrigado! - Fante","isPartOf":{"@id":"https://www.agenciafante.com.br/#website"},"datePublished":"2018-03-13T17:00:22+00:00","dateModified":"2024-08-15T17:41:22+00:00","description":"Recebemos as informações sobre o seu projeto. Retornaremos o mais breve possível para conversamos sobre seu seu projeto. Importante: pode ser que nosso","breadcrumb":{"@id":"https://www.agenciafante.com.br/orcamento/enviado/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https://www.agenciafante.com.br/orcamento/enviado/"]}]},{"@type":"BreadcrumbList","@id":"https://www.agenciafante.com.br/orcamento/enviado/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.agenciafante.com.br/"},{"@type":"ListItem","position":2,"name":"Orçamento","item":"https://www.agenciafante.com.br/orcamento/"},{"@type":"ListItem","position":3,"name":"Obrigado!"}]},{"@type":"WebSite","@id":"https://www.agenciafante.com.br/#website","url":"https://www.agenciafante.com.br/","name":"Fante","description":"Agência de Marketing Digital","publisher":{"@id":"https://www.agenciafante.com.br/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.agenciafante.com.br/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"},{"@type":"Organization","@id":"https://www.agenciafante.com.br/#organization","name":"Agência Fante","url":"https://www.agenciafante.com.br/","logo":{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https://www.agenciafante.com.br/#/schema/logo/image/","url":"https://www.agenciafante.com.br/wp-content/uploads/2019/02/apple-icon.png","contentUrl":"https://www.agenciafante.com.br/wp-content/uploads/2019/02/apple-icon.png","width":192,"height":192,"caption":"Agência Fante"},"image":{"@id":"https://www.agenciafante.com.br/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/agenciafante/","https://www.instagram.com/agenciafante/","https://www.youtube.com/estudiofantebr/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="icon" href="images/logo32x32.png" sizes="32x32">
+<link rel="icon" href="images/logo192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/logo180x180.png">
+<meta name="msapplication-TileImage" content="images/logo180x180.png">
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/logo32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/logo16x16.png">
+<meta name="msapplication-TileColor" content="#041020">
+<meta name="theme-color" content="#041020">
+
+<link data-minify="1" rel="stylesheet" media="all" href="css/style.css">
+
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle"></style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = []; const rocket_excluded_pairs = [];</script><link href="https://www.googletagmanager.com" rel="preconnect"></head>
+
+<body class="page-template page-template-page-enviado page-template-page-enviado-php page page-id-232 page-child parent-pageid-6">
+
+<div class="preloader">
+    <div class="spinner"></div>
+</div> 
+
+<header class="header">
+ <div class="header-content clearfix">
+
+  <a href="https://www.tglsolutions.com.br" class="logo" title="TGL Solutions">
+    <svg viewBox="0 0 131 33"><path d="M4.5 1.1C5.6 0.5 6.9 0.2 8.3 0.2 13.6 0.2 19 0.2 24.3 0.2 26.6 0.2 28.9 1.3 30.4 3 31.7 4.5 32.4 6.5 32.4 8.4 32.4 13.7 32.4 19 32.4 24.3 32.4 26.1 31.9 27.8 30.8 29.2 29.4 31.3 26.9 32.6 24.4 32.6 22.3 32.6 20.2 32.6 18.1 32.6 15.8 32.5 13.8 30.4 13.8 28.1 13.8 25.9 13.8 23.8 13.8 21.7 13.8 20.2 15.1 19 16.5 18.9 17.7 18.9 19 18.9 20.2 18.9 21.2 18.9 22.1 19.7 22.2 20.6 22.4 21.7 21.5 22.8 20.4 22.8 19.6 22.8 18.8 23.2 18.4 24 17.8 25.1 18.7 26.7 20 26.8 21.4 26.9 23 26.9 24.3 26.1 26.1 25.2 27.2 23.3 27.2 21.2 27.3 18.8 27.2 16.3 27.2 13.8 27.3 12.7 27 11.6 26.4 10.7 25.5 9 23.6 8 21.7 8 19.5 8 17.3 7.9 15.1 8 12.3 8.1 10 10.5 9.8 13.2 9.8 15 9.8 16.8 9.8 18.6 9.8 19.5 9.9 20.4 9.6 21.3 9.2 22.8 8 24 6.6 24.5 4.9 25.2 2.9 24.8 1.6 23.6 0.7 22.7 0.1 21.5 0 20.3L0 7.9C0.2 5.1 1.9 2.4 4.5 1.1ZM4.5 1.1"></path><path d="M51 3.8C53 3.5 55.1 4 57 4.8 56.7 6 56.3 7.2 56.1 8.4 55.1 8 54.1 7.6 53 7.7 52.3 7.8 51.7 8.2 51.4 8.9 50.8 9.9 51 11.2 50.9 12.3 52.5 12.3 54 12.3 55.5 12.3 55.5 13.5 55.5 14.7 55.5 15.9 54 15.9 52.5 15.9 50.9 15.9 51 20.6 51 25.2 51 29.9 49.4 29.8 47.8 29.9 46.2 29.8 46.2 25.2 46.2 20.6 46.2 15.9 45.4 15.9 44.6 15.9 43.8 15.9 43.8 14.7 43.8 13.5 43.8 12.3 44.6 12.3 45.4 12.3 46.2 12.3 46.2 10.4 46.3 8.3 47.3 6.6 48 5.2 49.4 4.1 51 3.8ZM51 3.8"></path><path d="M100.4 5.3C102 5.3 103.5 5.3 105.1 5.3 105.1 7.3 105.1 9.3 105.1 11.3 106.4 11.3 107.7 11.3 109 11.4 109 12.6 109 13.8 109 15 107.7 15 106.4 15 105.1 15 105.1 18 105.1 21.1 105.1 24.1 105.1 24.8 105.4 25.5 106.1 25.7 107.2 26.1 108.4 25.5 109.5 25.2 109.8 26.4 110.1 27.7 110.5 28.9 108.4 29.7 106.1 30.5 103.9 30 102.7 29.9 101.5 29.1 100.9 28 100.4 27 100.4 25.8 100.4 24.8 100.4 21.5 100.4 18.2 100.4 15 99.6 15 98.8 15 97.9 15 97.9 13.8 97.9 12.6 97.9 11.4 98.8 11.3 99.6 11.4 100.4 11.3 100.4 9.3 100.4 7.3 100.4 5.3ZM100.4 5.3"></path><path d="M57.6 13.4C59.9 11.9 62.6 11 65.4 11 67.6 11 70 11.5 71.7 13.1 73.1 14.4 73.7 16.3 73.7 18.1 73.8 20.4 73.7 22.6 73.8 24.8 73.7 25.4 74.3 25.8 74.9 25.9 74.9 27.2 74.9 28.5 74.9 29.8 73.6 30.1 72.2 30.3 71 29.7 70 29.1 69.7 27.9 69.8 26.9 68.5 28.5 66.6 29.7 64.6 30.1 62.3 30.5 59.7 30 58.1 28.3 56.4 26.5 56.1 23.6 57.4 21.5 58.5 19.7 60.7 18.8 62.7 18.5 64.8 18.2 67 18.4 69 19.2 69 18 69.1 16.7 68.4 15.8 67.6 14.7 66.2 14.3 65 14.3 62.8 14.3 60.8 15.2 59.1 16.4 58.6 15.4 58.1 14.4 57.6 13.4M62.3 21.8C61.1 22.6 60.7 24.3 61.6 25.5 62.3 26.5 63.6 26.9 64.7 26.7 66.4 26.6 68.1 25.8 68.9 24.4 69.1 23.5 69 22.6 69 21.7 66.9 21 64.3 20.5 62.3 21.8ZM62.3 21.8"></path><path d="M82.4 14.7C83.7 12.7 85.9 11.4 88.3 11.1 90 10.9 91.9 10.9 93.3 12.1 94.9 13.4 95.3 15.6 95.4 17.5 95.4 21.6 95.3 25.7 95.4 29.8 93.8 29.9 92.2 29.9 90.6 29.8 90.7 26.4 90.6 23 90.6 19.6 90.6 18.4 90.6 17.1 89.8 16.2 89.2 15.4 88.2 15.1 87.2 15.2 85.6 15.5 84.2 16.6 83.4 18 83.1 18.4 82.9 18.9 82.9 19.4 82.9 22.9 82.9 26.4 82.9 29.8 81.3 29.9 79.7 29.8 78.1 29.8 78.1 23.7 78.1 17.5 78.1 11.4 79.6 11.3 81 11.3 82.4 11.4 82.4 12.5 82.4 13.6 82.4 14.7ZM82.4 14.7"></path><path d="M113.5 14.3C116.9 10.2 123.8 9.9 127.8 13.5 130.1 15.6 131.1 19 130.6 22.1 125.8 22.1 121.1 22.1 116.3 22.1 116.4 23.6 117.2 25.1 118.5 25.9 120.7 27.5 124.4 26.8 125.6 24.2 127 24.6 128.3 25 129.7 25.4 128.5 27.7 126.1 29.4 123.5 30 121 30.5 118.3 30.2 116 29 114.1 27.9 112.6 26.2 111.9 24.2 110.7 20.9 111.2 17 113.5 14.3M118 15.5C116.9 16.4 116.3 17.7 116.2 19 119.4 19 122.6 19 125.9 19 125.7 17.8 125.2 16.5 124.2 15.6 122.5 14.1 119.7 14.1 118 15.5ZM118 15.5"></path></svg>
+  </a>
+
+  <input type="checkbox" name="toggle-menu" id="toggle-menu" class="toggle-menu">
+  <label for="toggle-menu" class="toggle-menu">
+    <div><span></span><span></span><span></span></div>
+    <p>Menu</p><p>Fechar</p>
+  </label>
+
+  <div class="nav"> 
+     <div class="nav-content clearfix"> 
+
+      <div class="menu clearfix">
+        <ul class="clearfix" style="margin-top: -40px;"> 
+          <li><a href="https://www.tglsolutions.com.br/sobre/" title="Sobre">Sobre</a></li>
+          <li><a class="has-subnav" href="#0" title="Serviços">Serviços</a></li>
+          <li><a href="https://www.tglsolutions.com.br/projetos/" title="Projetos">Projetos</a></li>
+          <li><a href="https://tglsolutions.com.br/contato/" target="_blank" rel="noopener" title="Blog">Contato</a></li>
+        </ul>  
+      </div><!-- /menu -->
+
+      <div class="address clearfix">
+        <span class="title-common">Onde estamos</span>
+        <p>Avenida Paulista, 1106<br> 
+        São Paulo - SP, 01310-100
+        <a href="https://maps.app.goo.gl/kkERgmvi9crFVY6g8" target="_blank" rel="noopener" title="Ver mapa">Ver mapa</a>
+        </p>
+        <span class="title-common" style="margin-top: 16px;">Redes sociais</span>
+        <a href="https://www.instagram.com/tglsolutions/" target="_blank" rel="noopener" title="Instagram" class="social">
+          <svg width="32" height="32" viewBox="0 0 256 256"><path d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"></path></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61572792345451" target="_blank" rel="noopener" title="Facebook" class="social">
+          <svg width="32" height="32" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path></svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5511975678074" target="_blank" rel="noopener" title="Whatsapp" class="social">
+          <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#25D366">
+            <path d="M17.472 14.437c-.297-.149-1.758-.867-2.029-.965-.271-.099-.468-.148-.666.149-.198.297-.763.964-.935 1.162-.171.198-.345.223-.642.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.133-.132.297-.346.445-.519.148-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.666-1.612-.915-2.223-.241-.579-.485-.501-.666-.511-.173-.007-.372-.009-.571-.009-.198 0-.519.074-.791.372s-1.039 1.016-1.039 2.479 1.065 2.876 1.214 3.074c.149.198 2.104 3.22 5.096 4.513.713.308 1.268.493 1.701.63.714.228 1.364.196 1.878.119.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z"/>
+            <path d="M12.007 2.002c-5.522 0-9.995 4.477-9.995 9.998a9.9 9.9 0 0 0 1.366 5.04L2 22l5.093-1.362a9.965 9.965 0 0 0 4.914 1.274c5.522 0 9.995-4.477 9.995-9.998s-4.473-9.998-9.995-9.998zm0 18.355c-1.679 0-3.318-.444-4.759-1.282l-.341-.203-3.018.807.81-2.941-.223-.352A7.93 7.93 0 0 1 4.013 12c0-4.412 3.589-8.001 7.994-8.001 4.405 0 7.994 3.589 7.994 8.001s-3.589 8.001-7.994 8.001z"/>
+          </svg>          
+        </a>
+        <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento" style="margin-top: 16px;">Faça um orçamento</a>
+      </div>
+
+      <div class="submenu clearfix" style="margin-top: -60px;"> 
+        <ul class="owl-carousel owl-servicos servicos-items anime fadeInUp delay--2s clearfix">
+          <li>
+            <a href="https://www.tglsolutions.com.br/servicos/software/" title="TGL Solutions">
+              <span>
+                <img width="32" height="32" src="images/software.png" alt="TGL Solutions - Software" title="TGL Solutions - Software" data-lazy-src="images/software.png"><noscript>
+                <img width="32" height="32" src="images/software.png" alt="TGL Solutions - Software" title="TGL Solutions - Software" /></noscript>
+              </span>
+              <h4 class="title-common">Software</h4>
+              <p>Desenvolvimento de soluções personalizadas, sistemas web, automação e aplicativos para otimizar processos.</p>
+            </a>
+            </li>
+            <li>
+              <a href="https://www.tglsolutions.com.br/servicos/webdesign/" title="TGL Solutions">
+                <span>
+                  <img width="32" height="32" src="images/webdesign.png" alt="TGL Solutions - Webdesign" title="TGL Solutions - Webdesign" data-lazy-src="images/webdesign.png"><noscript>
+                  <img width="32" height="32" src="images/webdesign.png" alt="TGL Solutions - Webdesign" title="TGL Solutions - Webdesign" /></noscript>
+                </span>
+                <h4 class="title-common">Webdesign</h4>
+                <p>Criação de interfaces digitais e sites responsivos, e-commerces, landing pages, onepages e blogs.</p>
+              </a>
+            </li>
+          <li>
+            <a href="https://www.tglsolutions.com.br/servicos/automacao/" title="TGL Solutions">
+              <span>
+                <img width="32" height="32" src="images/automacao.png" alt="TGL Solutions - Automação" title="TGL Solutions - Automação" data-lazy-src="images/automacao.png"><noscript>
+                <img width="32" height="32" src="images/automacao.png" alt="TGL Solutions - Automação" title="TGL Solutions - Automação" /></noscript>
+              </span>
+              <h4 class="title-common">Automação</h4>
+                <p>Implementação de sistemas automatizados, integrações e fluxos inteligentes para otimizar operações e reduzir custos.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tglsolutions.com.br/servicos/aplicacao/" title="TGL Solutions">
+              <span>
+                <img width="32" height="32" src="images/aplicacao.png" alt="TGL Solutions - Aplicação" title="TGL Solutions - Aplicação" data-lazy-src="images/aplicacao.png"><noscript>
+                <img width="32" height="32" src="images/aplicacao.png" alt="TGL Solutions - Aplicação" title="TGL Solutions - Aplicação" /></noscript>
+              </span>
+              <h4 class="title-common">Aplicação</h4>
+              <p>Criação de soluções digitais personalizadas, sistemas CRM para vendas e dashboards interativos para análise de dados.</p>
+            </a>
+          </li>
+       </ul>
+      </div><!-- /submenu -->
+
+     </div>
+  </div><!-- /nav -->
+
+ </div>
+</header>
+
+
+<main>
+<div class="col-af pedido-enviado one-column">
+  <div class="col-af-content clearfix">
+
+	
+	   <div id="post-232" class="post-232 page type-page status-publish hentry">
+		 <div class="entry-content clearfix">
+			<div class="_form-thank-you">
+			  <svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 70 70">
+ 			    <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"></path>
+			    <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"></circle>
+			    <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent"></polyline>
+			  </svg>
+			</div>
+			<h1 class="title-common">Obrigado!</h1>
+			<p>Recebemos as informações sobre o seu projeto.</p>
+      <p>Retornaremos o mais breve possível para conversamos sobre seu seu projeto.</p>
+      <p style="font-size: 10px;">Importante: pode ser que nosso e-mail chegue na sua caixa de spam.</p>
+			<a href="https://www.tglsolutions.com.br" class="btn" style="color: #fff;" title="Voltar para o início">Voltar para o início</a>
+		 </div><!-- .entry-content -->
+	   </div><!-- #post-## -->
+
+	
+  </div>
+</div><!-- /col-af -->
+
+<div data-wpr-lazyrender="1" class="cta col-af">
+  <div class="col-af-content clearfix">
+    <div class="anime fadeInUp">
+      <span class="title-common" style="margin-top: 10px;"><strong style="color: #0F6CBD;">Uma parceria de projetos incríveis</strong></span>
+      <h2 class="title-common" style="margin-top: -26px;">Ideias extraordinárias ganham vida aqui.</h2>
+    </div>
+    <div class="anime fadeInUp delay--2s" style="margin-top: 9px;">
+      <p>Seu projeto merece estar nas melhores mãos. Conte com nossa software house para transformar sua visão em sucesso. Vamos começar hoje mesmo!</p>
+      <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento" style="margin-top: -30px;">Faça um orçamento</a>
+    </div>
+  </div>
+</div><!-- /cta -->
+</main>
+
+<footer data-wpr-lazyrender="1" class="footer col-af">
+  <div class="col-af-content clearfix" >
+    <div>
+      <a href="https://www.tglsolutions.com.br" class="logo" title="Fante">
+        <img src="images/logo-alt.png" alt="Logo - Footer">
+      </a>
+      <p class="privacy">TGL Solutions © 2021 - 2024</p><br>
+      <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" title="Política de privacidade" class="privacy">Política de privacidade</a>
+    </div>
+    <div>
+      <span class="title-common" style="color: #0F6CBD;">Onde estamos</span>
+      <p>Avenida Paulista, 1106<br> 
+      São Paulo - SP, 01310-100
+      <a href="https://maps.app.goo.gl/kkERgmvi9crFVY6g8" target="_blank" rel="noopener" title="Ver mapa" style="color: #0F6CBD;">Ver mapa</a>
+      </p>
+    </div>
+    <div>
+      <span class="title-common" style="color: #0F6CBD;">Redes sociais</span>
+        <a href="https://www.instagram.com/tglsolutions/" target="_blank" rel="noopener" title="Instagram" class="social">
+          <svg width="32" height="32" viewBox="0 0 256 256"><path d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"></path></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61572792345451" target="_blank" rel="noopener" title="Facebook" class="social">
+          <svg width="32" height="32" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path></svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5511975678074" target="_blank" rel="noopener" title="Whatsapp" class="social">
+          <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#25D366">
+            <path d="M17.472 14.437c-.297-.149-1.758-.867-2.029-.965-.271-.099-.468-.148-.666.149-.198.297-.763.964-.935 1.162-.171.198-.345.223-.642.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.133-.132.297-.346.445-.519.148-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.666-1.612-.915-2.223-.241-.579-.485-.501-.666-.511-.173-.007-.372-.009-.571-.009-.198 0-.519.074-.791.372s-1.039 1.016-1.039 2.479 1.065 2.876 1.214 3.074c.149.198 2.104 3.22 5.096 4.513.713.308 1.268.493 1.701.63.714.228 1.364.196 1.878.119.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z"/>
+            <path d="M12.007 2.002c-5.522 0-9.995 4.477-9.995 9.998a9.9 9.9 0 0 0 1.366 5.04L2 22l5.093-1.362a9.965 9.965 0 0 0 4.914 1.274c5.522 0 9.995-4.477 9.995-9.998s-4.473-9.998-9.995-9.998zm0 18.355c-1.679 0-3.318-.444-4.759-1.282l-.341-.203-3.018.807.81-2.941-.223-.352A7.93 7.93 0 0 1 4.013 12c0-4.412 3.589-8.001 7.994-8.001 4.405 0 7.994 3.589 7.994 8.001s-3.589 8.001-7.994 8.001z"/>
+          </svg>          
+        </a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies-container">
+  <div class="cookies-content clearfix">
+    <p>Utilizamos cookies para melhorar a sua experiência em nosso site. Ao continuar navegando você concorda com a nossa <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" title="Política de privacidade">política de privacidade</a>.</p>
+    <div class="cookies-pref">
+      <label><input type="checkbox" checked="" data-function="analytics">Análise de Uso</label>
+      <label><input type="checkbox" checked="" data-function="marketing">Marketing</label>
+    </div>
+    <button class="cookies-save">Continuar e fechar</button>
+  </div>
+</div>
+
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/jquery-3.4.1.js?ver=1737380581" data-rocket-defer="" defer=""></script>
+
+
+
+
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/owl.carousel.js?ver=1737380581" data-rocket-defer="" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/main.js?ver=1737380581" data-rocket-defer="" defer=""></script>
+<script data-minify="1" nowprocket="" src="js/loader.js" data-rocket-defer="" defer=""></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.agenciafante.com.br","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceMappingURL=lazyload-css.min.js.map
+/* ]]> */
+</script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="js/lazyload.min.js"></script>
+
+
+</body></html><!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1737384421 -->
