@@ -245,7 +245,7 @@ a {
   min-width: 200px;
   height: 57px;
   line-height: 54px;
-  color: #041020;
+  color: #fff;
   border: 1.5pt solid transparent;
   text-align: center;
   margin: 0;
@@ -536,7 +536,7 @@ p {
 .logo {
   display: block;
   float: left;
-  width: 105px;
+  width: 180px;
   margin: 26px 0 0;
   position: relative;
 }
@@ -615,6 +615,7 @@ input#toggle-menu:checked ~ .nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: -40px;
 }
 .menu ul li {
   display: block;
@@ -859,6 +860,9 @@ input#toggle-menu:checked ~ label.toggle-menu span {
   .address p a {
     display: block;
     margin: 5px 0 0;
+  }
+  .menu ul {
+    margin-top: 10px;
   }
   .menu ul li {
     padding: 0 0 30px;

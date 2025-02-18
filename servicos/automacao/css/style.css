@@ -536,8 +536,8 @@ p {
 .logo {
   display: block;
   float: left;
-  width: 200px;
-  margin: 20px 0 0;
+  width: 180px;
+  margin: 26px 0 0;
   position: relative;
 }
 .logo svg {
@@ -564,8 +564,8 @@ p {
     height: 65px;
   }
   .logo {
-    width: 95px;
-    margin: 20px 0 0;
+    width: 150px;
+    margin: 18px 0 0;
   }
 }
 .nav {
@@ -615,6 +615,7 @@ input#toggle-menu:checked ~ .nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: -40px;
 }
 .menu ul li {
   display: block;
@@ -859,6 +860,9 @@ input#toggle-menu:checked ~ label.toggle-menu span {
   .address p a {
     display: block;
     margin: 5px 0 0;
+  }
+  .menu ul {
+    margin-top: 10px;  
   }
   .menu ul li {
     padding: 0 0 30px;

@@ -62,7 +62,7 @@
  <div class="header-content clearfix">
 
   <a href="https://www.tglsolutions.com.br" class="logo" title="TGL Solutions">
-    <img src="images/logo-alt.png" alt="Logo Original">
+    <img src="images/logo.png" alt="Logo Original" class="logo-default">
   </a>
 
   <input type="checkbox" name="toggle-menu" id="toggle-menu" class="toggle-menu">
@@ -75,7 +75,7 @@
      <div class="nav-content clearfix"> 
 
       <div class="menu clearfix">
-        <ul class="clearfix" style="margin-top: -40px;"> 
+        <ul class="clearfix"> 
           <li><a href="https://www.tglsolutions.com.br/sobre/" title="Sobre">Sobre</a></li>
           <li><a class="has-subnav" href="#0" title="Serviços">Serviços</a></li>
           <li><a href="https://www.tglsolutions.com.br/projetos/" title="Projetos">Projetos</a></li>
@@ -205,13 +205,13 @@
 <div class="metodologia col-af">
   <div class="col-af-content clearfix">
      <div class="info anime fadeInUp">
-        <span class="title-common" ><strong style="color: #0F6CBD;">Passo a passo</strong></span>
+        <span class="title-common"><strong style="color: #0F6CBD;">Passo a passo</strong></span>
         <h2 class="title-common" style="margin-top: -30px;">Metodologia</h2>
      </div>
      <div class="info anime fadeInUp">
-      <p>Descubra como nossa metodologia pode transformar a gestão de seus clientes com um <strong style="color: #0F6CBD;">CRM personalizado</strong>, eficiente e integrado às suas necessidades.</p>
-      <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento" style="color: #fff;">Faça um orçamento</a>
-     </div>
+      <p class="mobile-spacing">Descubra como nossa metodologia pode transformar a gestão de seus clientes com um <strong style="color: #0F6CBD;">CRM personalizado</strong>, eficiente e integrado às suas necessidades.</p>
+      <a href="https://www.tglsolutions.com.br/orcamento/" class="btn mobile-spacing" title="Faça um orçamento">Faça um orçamento</a>
+    </div>
      <ul class="owl-carousel owl-metodologia anime fadeInUp delay--2s clearfix">
       <li>
         <span>
@@ -266,6 +266,16 @@
      </ul>
   </div>
 </div><!-- /metodologia -->
+
+<style>
+  @media (max-width: 768px) { 
+    .mobile-spacing {
+        align-items: center;
+        margin-right: 30px;
+        display: block; /* Garante que o espaçamento seja aplicado corretamente */
+    }
+}
+</style>
 
 <div class="sobre destaques col-af">
   <div class="col-af-content clearfix">
