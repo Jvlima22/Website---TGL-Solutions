@@ -74,9 +74,9 @@
     <div class="form clearfix">
       <form id="orcamento-site" class="form-af clearfix" name="orcamento-site" autocomplete="off" method="post">
        
-       <h2 class="title-common">Como podemos ajudá-lo? <span>Você pode selecionar várias opções</span></h2>
-
-       <div class="full clearfix">
+        <h2 class="title-common">Como podemos ajudá-lo? <span>Você pode selecionar várias opções</span></h2>
+    
+        <div class="full clearfix">
           <input type="checkbox" name="segmento[]" id="segmento-1" value="Website">
           <label for="segmento-1" id="segmento-01" class="checkbox">Website</label>
           <input type="checkbox" name="segmento[]" id="segmento-2" value="E-commerce">
@@ -95,69 +95,111 @@
           <label for="segmento-8" id="segmento-08" class="checkbox">Automação</label>
           <input type="checkbox" name="segmento[]" id="segmento-9" value="Aplicação">
           <label for="segmento-9" id="segmento-09" class="checkbox">Aplicação</label>
-       </div>
-
-       <h2 class="title-common">Qual o budget disponível? <span>Como cada projeto é único, precisamos analisar a demanda para conseguir precificar</span></h2>
- 
-       <div class="full clearfix">
+        </div>
+    
+        <h2 class="title-common">Qual o budget disponível? <span>Como cada projeto é único, precisamos analisar a demanda para conseguir precificar</span></h2>
+    
+        <div class="full clearfix">
           <input type="radio" name="tamanho" id="tamanho-3" value="Abaixo de R$7.000">
           <label for="tamanho-3" id="tamanho-03" class="radio">Abaixo de 7.000</label>
           <input type="radio" name="tamanho" id="tamanho-2" value="R$7.000 - R$15.000">
           <label for="tamanho-2" id="tamanho-02" class="radio">7.000 - 15.000</label>
           <input type="radio" name="tamanho" id="tamanho-1" value="Acima de R$15.000">
           <label for="tamanho-1" id="tamanho-01" class="radio">Acima de 15.000</label>
-       </div>
-
-       <h2 class="title-common">Sobre <span>Informações para que possamos entrar em contato</span></h2>
-
-       <div class="full">
-         <label for="nome">Nome *</label>
-         <input type="text" name="nome" id="nome" placeholder="Nome completo" pattern="[a-zA-Z\s\u00C0-\u00FF]{1,}" required="">
-       </div>
-       <div data-rocket-location-hash="bd74d375918add18d6b92168fe60b650">
-         <label for="email">E-mail *</label>
-         <input type="email" name="email" id="email" placeholder="Seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="">
-       </div>
-       <div data-rocket-location-hash="d7e6e4a5cd6da651d79890911470ebb9">
-         <label for="telefone">Telefone *</label>
-         <input type="tel" name="telefone" id="telefone" class="celular-input" placeholder="(00) 0000-0000" pattern="^[0-9\-\+\s\(\)]*$" required="">
-       </div>
-       <div data-rocket-location-hash="7021b8d909dbdb182b21040e3d9999db">
-         <label for="empresa">Empresa *</label>
-         <input type="text" name="empresa" id="empresa" placeholder="Nome da sua empresa" required="">
-       </div>
-       <div>
-         <label for="conheceu">Como nos conheceu? *</label>
-         <select name="conheceu" id="conheceu" required="">
-           <option value="" disabled="disabled" selected="">Selecione</option>
-           <option value="Google">Google</option>
-           <option value="Instagram">Instagram</option>
-           <option value="Facebook">Facebook</option>
-           <option value="Indicação">Indicação</option>
-           <option value="Já sou cliente">Já sou cliente</option>
-           <option value="Outro">Outro</option>
-         </select>
-       </div>
-       <div class="full">
-         <label for="mensagem">Faça uma breve descrição do seu projeto *</label>
-         <textarea id="mensagem" name="mensagem" placeholder="Essas informações são essenciais para que possamos entender a demanda" required=""></textarea>
-       </div>
-       <div>
-         <input class="naoexibir" type="url" name="curl" value="">
-         <input class="naoexibir" type="text" name="redirect" value="https://www.tglsolutions.com.br/orcamento/enviado/">
-         <input class="naoexibir" type="text" name="ehumano" value="">
-         <p>Ao enviar o formulário, eu declaro que estou de acordo com a <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.</p>
-       </div>
-       <div>
-         <input type="submit" name="enviar" class="btn" value="Solicitar orçamento">
-       </div>
-
+        </div>
+    
+        <h2 class="title-common">Sobre <span>Informações para que possamos entrar em contato</span></h2>
+    
+        <div class="full">
+          <label for="nome">Nome *</label>
+          <input type="text" name="nome" id="nome" placeholder="Nome completo" pattern="[a-zA-Z\s\u00C0-\u00FF]{1,}" required="">
+        </div>
+        <div data-rocket-location-hash="bd74d375918add18d6b92168fe60b650">
+          <label for="email">E-mail *</label>
+          <input type="email" name="email" id="email" placeholder="Seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="">
+        </div>
+        <div data-rocket-location-hash="d7e6e4a5cd6da651d79890911470ebb9">
+          <label for="telefone">Telefone *</label>
+          <input type="tel" name="telefone" id="telefone" class="celular-input" placeholder="(00) 0000-0000" pattern="^[0-9\-\+\s\(\)]*$" required="">
+        </div>
+        <div data-rocket-location-hash="7021b8d909dbdb182b21040e3d9999db">
+          <label for="empresa">Empresa *</label>
+          <input type="text" name="empresa" id="empresa" placeholder="Nome da sua empresa" required="">
+        </div>
+        <div>
+          <label for="conheceu">Como nos conheceu? *</label>
+          <select name="conheceu" id="conheceu" required="">
+            <option value="" disabled="disabled" selected="">Selecione</option>
+            <option value="Google">Google</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Indicação">Indicação</option>
+            <option value="Já sou cliente">Já sou cliente</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="mensagem">Faça uma breve descrição do seu projeto *</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Essas informações são essenciais para que possamos entender a demanda" required=""></textarea>
+        </div>
+        <div>
+          <input class="naoexibir" type="url" name="curl" value="">
+          <input class="naoexibir" type="text" name="redirect" value="https://www.tglsolutions.com.br/orcamento/enviado/">
+          <input class="naoexibir" type="text" name="ehumano" value="">
+          <p>Ao enviar o formulário, eu declaro que estou de acordo com a <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.</p>
+        </div>
+        <div>
+          <button type="button" class="btn" onclick="enviarWhatsApp()">Solicitar orçamento</button>
+        </div>
+    
       </form>
-
     </div><!-- /form -->
-                
- </div>
-</div><!-- /orcamento -->
+    
+    <script>
+      function enviarWhatsApp() {
+        // Captura os valores dos campos do formulário
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var telefone = document.getElementById("telefone").value;
+        var empresa = document.getElementById("empresa").value;
+        var conheceu = document.getElementById("conheceu").value;
+        var mensagem = document.getElementById("mensagem").value;
+    
+        // Captura os segmentos selecionados
+        var checkboxes = document.querySelectorAll('input[name="segmento[]"]:checked');
+        var segmentos = [];
+        checkboxes.forEach((checkbox) => {
+          segmentos.push(checkbox.value);
+        });
+    
+        // Captura o orçamento selecionado
+        var tamanho = document.querySelector('input[name="tamanho"]:checked');
+        tamanho = tamanho ? tamanho.value : "Não informado";
+    
+        // Monta a mensagem formatada
+        var msg = `📌 *Novo pedido de orçamento*\n\n`;
+        msg += `👤 *Nome:* ${nome}\n`;
+        msg += `📧 *E-mail:* ${email}\n`;
+        msg += `📞 *Telefone:* ${telefone}\n`;
+        msg += `🏢 *Empresa:* ${empresa}\n`;
+        msg += `📌 *Como nos conheceu:* ${conheceu}\n`;
+        msg += `💰 *Budget:* ${tamanho}\n`;
+        msg += `📂 *Segmento:* ${segmentos.length > 0 ? segmentos.join(", ") : "Não informado"}\n`;
+        msg += `📝 *Descrição do projeto:*\n${mensagem}\n`;
+    
+        // Codifica a mensagem para URL
+        msg = encodeURIComponent(msg);
+    
+        // Número de WhatsApp (substituir pelo seu número)
+        var numeroWhatsApp = "5511975678074"; // Formato internacional
+    
+        // URL de envio do WhatsApp
+        var url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${msg}`;
+    
+        // Abre o WhatsApp Web ou aplicativo no celular
+        window.open(url, "_blank");
+      }
+    </script>    
 
 </main>
 
@@ -208,9 +250,7 @@
 
 <script data-minify="1" data-rocket-defer="" defer="" src="js/jquery-3.4.1.js" data-rocket-status="failed-network"></script>
 
-
 <script data-minify="1" data-rocket-defer="" defer="" src="js/mask.js" data-rocket-status="failed-network"></script>
-
 
 <script data-minify="1" data-rocket-defer="" defer="" src="js/owl.carousel.js" data-rocket-status="failed-network"></script>
 <script data-minify="1" data-rocket-defer="" defer="" src="js/main.js" data-rocket-status="failed-network"></script>
