@@ -1,0 +1,15 @@
+# Redirecionamentos para URLs amigáveis
+/sobre/ /sobre/index.html 200
+/projetos/ /projetos/index.html 200
+/orcamento/ /orcamento/index.html 200
+/politica-de-privacidade/ /politica-de-privacidade/index.html 200
+/servicos/software/ /servicos/software/index.html 200
+/servicos/webdesign/ /servicos/webdesign/index.html 200
+/servicos/automacao/ /servicos/automacao/index.html 200
+/servicos/aplicacao/ /servicos/aplicacao/index.html 200
+
+# Redirecionamento de www para não-www (ou vice-versa, conforme preferência)
+https://www.tglsolutions.com.br/* https://tglsolutions.com.br/:splat 301!
+
+# Fallback para SPA (se necessário)
+/* /index.html 200 
