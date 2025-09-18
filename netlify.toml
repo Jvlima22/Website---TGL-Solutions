@@ -1,6 +1,10 @@
 [build]
   publish = "."
 
+# Configurações para resolver timeout e melhorar performance
+
+
+# Headers de segurança e cache
 [[headers]]
   for = "/*"
   [headers.values]
@@ -8,6 +12,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "*.css"
