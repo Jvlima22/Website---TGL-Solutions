@@ -1,168 +1,551 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.6",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))})),document.addEventListener("DOMContentLoaded",(()=>{this.k()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}p(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.S(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.S(t.target,"rocket-onclick","onclick"),this.M()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.S(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.M()}O(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerWPRocketBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerWPRocketBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}D(){return new Promise((t=>{this.P?this.M=t:t()}))}C(){this.P=!0}M(){this.P=!1}S(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}k(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.T(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.j(this),this.F(this),this.I(),this.W(),this.q(),await this.A(this.delayedScripts.normal),await this.A(this.delayedScripts.defer),await this.A(this.delayedScripts.async);try{await this.U(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.D().then((()=>{this.O()})),this.N()}W(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed-network"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: data-uri blocked by CSP -> fallback"),t.removeAttribute("src"),this.B(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())})),s?(t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async A(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.A(t)):Promise.resolve()}q(){this.T([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}T(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o&&!o.startsWith("data:")){const s=document.createElement("link");s.href=o,s.rel=e,"preconnect"!==e&&(s.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(s.crossOrigin=!0),t.crossOrigin&&(s.crossOrigin=t.crossOrigin),t.integrity&&(s.integrity=t.integrity),i.appendChild(s),this.trash.push(s)}})),document.head.appendChild(i)}j(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function s(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),s(document,"onreadystatechange"),s(window,"onload"),s(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(t){const e=o.fn[t];o.fn[t]=o.fn.init.prototype[t]=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this}}o&&o.fn&&!t.allJQueries.includes(o)&&(o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])},s("on"),s("one"),t.allJQueries.push(o)),e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async U(){this.domReadyFired=!0;try{document.readyState="interactive"}catch(t){}await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){try{document.readyState="complete"}catch(t){}await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}I(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.p(t)}}RocketLazyLoadScripts.run()})();</script>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<head>
+  <meta charset="utf-8">
+  <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+  <script>(() => { class RocketLazyLoadScripts { constructor() { this.v = "1.2.6", this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this.t.bind(this), this.touchStartHandler = this.i.bind(this), this.touchMoveHandler = this.o.bind(this), this.touchEndHandler = this.h.bind(this), this.clickHandler = this.u.bind(this), this.interceptedClicks = [], this.interceptedClickListeners = [], this.l(this), window.addEventListener("pageshow", (t => { this.persisted = t.persisted, this.everythingLoaded && this.m() })), this.CSPIssue = sessionStorage.getItem("rocketCSPIssue"), document.addEventListener("securitypolicyviolation", (t => { this.CSPIssue || "script-src-elem" !== t.violatedDirective || "data" !== t.blockedURI || (this.CSPIssue = !0, sessionStorage.setItem("rocketCSPIssue", !0)) })), document.addEventListener("DOMContentLoaded", (() => { this.k() })), this.delayedScripts = { normal: [], async: [], defer: [] }, this.trash = [], this.allJQueries = [] } p(t) { document.hidden ? t.t() : (this.triggerEvents.forEach((e => window.addEventListener(e, t.userEventHandler, { passive: !0 }))), window.addEventListener("touchstart", t.touchStartHandler, { passive: !0 }), window.addEventListener("mousedown", t.touchStartHandler), document.addEventListener("visibilitychange", t.userEventHandler)) } _() { this.triggerEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, { passive: !0 }))), document.removeEventListener("visibilitychange", this.userEventHandler) } i(t) { "HTML" !== t.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.addEventListener("mousemove", this.touchMoveHandler), t.target.addEventListener("click", this.clickHandler), this.L(t.target, !0), this.S(t.target, "onclick", "rocket-onclick"), this.C()) } o(t) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler), t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.S(t.target, "rocket-onclick", "onclick"), this.M() } h() { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler) } u(t) { t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.S(t.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(t), t.preventDefault(), t.stopPropagation(), t.stopImmediatePropagation(), this.M() } O() { window.removeEventListener("touchstart", this.touchStartHandler, { passive: !0 }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((t => { t.target.dispatchEvent(new MouseEvent("click", { view: t.view, bubbles: !0, cancelable: !0 })) })) } l(t) { EventTarget.prototype.addEventListenerWPRocketBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (e, i, o) { "click" !== e || t.windowLoaded || i === t.clickHandler || t.interceptedClickListeners.push({ target: this, func: i, options: o }), (this || window).addEventListenerWPRocketBase(e, i, o) } } L(t, e) { this.interceptedClickListeners.forEach((i => { i.target === t && (e ? t.removeEventListener("click", i.func, i.options) : t.addEventListener("click", i.func, i.options)) })), t.parentNode !== document.documentElement && this.L(t.parentNode, e) } D() { return new Promise((t => { this.P ? this.M = t : t() })) } C() { this.P = !0 } M() { this.P = !1 } S(t, e, i) { t.hasAttribute && t.hasAttribute(e) && (event.target.setAttribute(i, event.target.getAttribute(e)), event.target.removeAttribute(e)) } t() { this._(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this.R.bind(this)) : this.R() } k() { let t = []; document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e => { let i = e.getAttribute("data-rocket-src"); if (i && !i.startsWith("data:")) { 0 === i.indexOf("//") && (i = location.protocol + i); try { const o = new URL(i).origin; o !== location.origin && t.push({ src: o, crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type") }) } catch (t) { } } })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.T(t, "preconnect") } async R() { this.lastBreath = Date.now(), this.j(this), this.F(this), this.I(), this.W(), this.q(), await this.A(this.delayedScripts.normal), await this.A(this.delayedScripts.defer), await this.A(this.delayedScripts.async); try { await this.U(), await this.H(this), await this.J() } catch (t) { console.error(t) } window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.D().then((() => { this.O() })), this.N() } W() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => { t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t) })) } async B(t) { if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => { let i; function o() { (i || t).setAttribute("data-rocket-status", "executed"), e() } try { if (navigator.userAgent.indexOf("Firefox/") > 0 || "" === navigator.vendor || this.CSPIssue) i = document.createElement("script"), [...t.attributes].forEach((t => { let e = t.nodeName; "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue)) })), t.text && (i.text = t.text), i.hasAttribute("src") ? (i.addEventListener("load", o), i.addEventListener("error", (function () { i.setAttribute("data-rocket-status", "failed-network"), e() })), setTimeout((() => { i.isConnected || e() }), 1)) : (i.text = t.text, o()), t.parentNode.replaceChild(i, t); else { const i = t.getAttribute("data-rocket-type"), s = t.getAttribute("data-rocket-src"); i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o), t.addEventListener("error", (i => { this.CSPIssue && i.target.src.startsWith("data:") ? (console.log("WPRocket: data-uri blocked by CSP -> fallback"), t.removeAttribute("src"), this.B(t).then(e)) : (t.setAttribute("data-rocket-status", "failed-network"), e()) })), s ? (t.removeAttribute("data-rocket-src"), t.src = s) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text))) } } catch (i) { t.setAttribute("data-rocket-status", "failed-transform"), e() } })); t.setAttribute("data-rocket-status", "skipped") } async A(t) { const e = t.shift(); return e && e.isConnected ? (await this.B(e), this.A(t)) : Promise.resolve() } q() { this.T([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } T(t, e) { var i = document.createDocumentFragment(); t.forEach((t => { const o = t.getAttribute && t.getAttribute("data-rocket-src") || t.src; if (o && !o.startsWith("data:")) { const s = document.createElement("link"); s.href = o, s.rel = e, "preconnect" !== e && (s.as = "script"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (s.crossOrigin = !0), t.crossOrigin && (s.crossOrigin = t.crossOrigin), t.integrity && (s.integrity = t.integrity), i.appendChild(s), this.trash.push(s) } })), document.head.appendChild(i) } j(t) { let e = {}; function i(i, o) { return e[o].eventsToRewrite.indexOf(i) >= 0 && !t.everythingLoaded ? "rocket-" + i : i } function o(t, o) { !function (t) { e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = i(arguments[0], t), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(o) } function s(e, i) { let o = e[i]; e[i] = null, Object.defineProperty(e, i, { get: () => o || function () { }, set(s) { t.everythingLoaded ? o = s : e["rocket" + i] = o = s } }) } o(document, "DOMContentLoaded"), o(window, "DOMContentLoaded"), o(window, "load"), o(window, "pageshow"), o(document, "readystatechange"), s(document, "onreadystatechange"), s(window, "onload"), s(window, "onpageshow"); try { Object.defineProperty(document, "readyState", { get: () => t.rocketReadyState, set(e) { t.rocketReadyState = e }, configurable: !0 }), document.readyState = "loading" } catch (t) { console.log("WPRocket DJE readyState conflict, bypassing") } } F(t) { let e; function i(e) { return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || 0 === t.indexOf("load.") ? "rocket-jquery-load" : t)).join(" ") } function o(o) { function s(t) { const e = o.fn[t]; o.fn[t] = o.fn.init.prototype[t] = function () { return this[0] === window && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { const e = arguments[0][t]; delete arguments[0][t], arguments[0][i(t)] = e }))), e.apply(this, arguments), this } } o && o.fn && !t.allJQueries.includes(o) && (o.fn.ready = o.fn.init.prototype.ready = function (e) { return t.domReadyFired ? e.bind(document)(o) : document.addEventListener("rocket-DOMContentLoaded", (() => e.bind(document)(o))), o([]) }, s("on"), s("one"), t.allJQueries.push(o)), e = o } o(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => e, set(t) { o(t) } }) } async H(t) { const e = document.querySelector("script[data-webpack]"); e && (await async function () { return new Promise((t => { e.addEventListener("load", t), e.addEventListener("error", t) })) }(), await t.K(), await t.H(t)) } async U() { this.domReadyFired = !0; try { document.readyState = "interactive" } catch (t) { } await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } async J() { try { document.readyState = "complete" } catch (t) { } await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G(); const t = new Event("rocket-pageshow"); t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }), this.windowLoaded = !0 } m() { document.onreadystatechange && document.onreadystatechange(), window.onload && window.onload(), window.onpageshow && window.onpageshow({ persisted: this.persisted }) } I() { const t = new Map; document.write = document.writeln = function (e) { const i = document.currentScript; i || console.error("WPRocket unable to document.write this: " + e); const o = document.createRange(), s = i.parentElement; let n = t.get(i); void 0 === n && (n = i.nextSibling, t.set(i, n)); const c = document.createDocumentFragment(); o.setStart(c, 0), c.appendChild(o.createContextualFragment(e)), s.insertBefore(c, n) } } async G() { Date.now() - this.lastBreath > 45 && (await this.K(), this.lastBreath = Date.now()) } async K() { return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t))) } N() { this.trash.forEach((t => t.remove())) } static run() { const t = new RocketLazyLoadScripts; t.p(t) } } RocketLazyLoadScripts.run() })();</script>
 
-<title>TGL Solutions - Aplicação</title>
-<meta name="description" content="Uma software house de soluções digitais na medida para o seu negócio.">
-<link rel="canonical" href="https://www.tglsolutions.com.br/">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TGL Solutions - Software House">
-<meta property="og:description" content="Uma software house de soluções digitais na medida para o seu negócio.">
-<meta property="og:url" content="https://www.tglsolutions.com.br/">
-<meta property="og:site_name" content="TGL Solutions">
-<meta property="article:modified_time" content="2024-01-25T16:23:46+00:00">
-<meta property="og:image:width" content="1920">
-<meta property="og:image:height" content="1080">
-<meta property="og:image:type" content="image/jpeg">
-<meta name="twitter:card" content="summary_large_image">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>TGL Solutions - Aplicação</title>
+  <meta name="description" content="Uma software house de soluções digitais na medida para o seu negócio.">
+  <link rel="canonical" href="https://www.tglsolutions.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TGL Solutions - Software House">
+  <meta property="og:description" content="Uma software house de soluções digitais na medida para o seu negócio.">
+  <meta property="og:url" content="https://www.tglsolutions.com.br/">
+  <meta property="og:site_name" content="TGL Solutions">
+  <meta property="article:modified_time" content="2024-01-25T16:23:46+00:00">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta name="twitter:card" content="summary_large_image">
 
 
-<style id="classic-theme-styles-inline-css" type="text/css">
-/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
-</style>
-<style id="global-styles-inline-css" type="text/css">
-:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
-</style>
-<link rel="icon" href="images/logo32x32.png" sizes="32x32">
-<link rel="icon" href="images/logo192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="images/logo180x180.png">
-<meta name="msapplication-TileImage" content="images/logo180x180.png">
-<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="images/logo180x180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/logo16x16.png">
-<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#041020">
-<meta name="msapplication-TileColor" content="#041020">
-<meta name="theme-color" content="#041020">
+  <style id="classic-theme-styles-inline-css" type="text/css">
+    /*! This file is auto-generated */
+    .wp-block-button__link {
+      color: #fff;
+      background-color: #32373c;
+      border-radius: 9999px;
+      box-shadow: none;
+      text-decoration: none;
+      padding: calc(.667em + 2px) calc(1.333em + 2px);
+      font-size: 1.125em
+    }
 
-<link data-minify="1" rel="stylesheet" media="all" href="css/style.css">
+    .wp-block-file__button {
+      background: #32373c;
+      color: #fff;
+      text-decoration: none
+    }
+  </style>
+  <style id="global-styles-inline-css" type="text/css">
+    :root {
+      --wp--preset--aspect-ratio--square: 1;
+      --wp--preset--aspect-ratio--4-3: 4/3;
+      --wp--preset--aspect-ratio--3-4: 3/4;
+      --wp--preset--aspect-ratio--3-2: 3/2;
+      --wp--preset--aspect-ratio--2-3: 2/3;
+      --wp--preset--aspect-ratio--16-9: 16/9;
+      --wp--preset--aspect-ratio--9-16: 9/16;
+      --wp--preset--color--black: #000000;
+      --wp--preset--color--cyan-bluish-gray: #abb8c3;
+      --wp--preset--color--white: #ffffff;
+      --wp--preset--color--pale-pink: #f78da7;
+      --wp--preset--color--vivid-red: #cf2e2e;
+      --wp--preset--color--luminous-vivid-orange: #ff6900;
+      --wp--preset--color--luminous-vivid-amber: #fcb900;
+      --wp--preset--color--light-green-cyan: #7bdcb5;
+      --wp--preset--color--vivid-green-cyan: #00d084;
+      --wp--preset--color--pale-cyan-blue: #8ed1fc;
+      --wp--preset--color--vivid-cyan-blue: #0693e3;
+      --wp--preset--color--vivid-purple: #9b51e0;
+      --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+      --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+      --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+      --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+      --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+      --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+      --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+      --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+      --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+      --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+      --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+      --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+      --wp--preset--font-size--small: 13px;
+      --wp--preset--font-size--medium: 20px;
+      --wp--preset--font-size--large: 36px;
+      --wp--preset--font-size--x-large: 42px;
+      --wp--preset--spacing--20: 0.44rem;
+      --wp--preset--spacing--30: 0.67rem;
+      --wp--preset--spacing--40: 1rem;
+      --wp--preset--spacing--50: 1.5rem;
+      --wp--preset--spacing--60: 2.25rem;
+      --wp--preset--spacing--70: 3.38rem;
+      --wp--preset--spacing--80: 5.06rem;
+      --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+      --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+      --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+      --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+      --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+    }
 
-<style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
-<noscript>
-<style id="wpr-lazyload-bg-nostyle"></style>
-</noscript>
-<script type="application/javascript">const rocket_pairs = []; const rocket_excluded_pairs = [];</script><link href="https://www.googletagmanager.com" rel="preconnect"></head>
+    :where(.is-layout-flex) {
+      gap: 0.5em;
+    }
 
-<body class="page-template page-template-page-servicos page-template-page-servicos-php page page-id-21 page-child parent-pageid-13">
+    :where(.is-layout-grid) {
+      gap: 0.5em;
+    }
 
-<div class="preloader">
+    body .is-layout-flex {
+      display: flex;
+    }
+
+    .is-layout-flex {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .is-layout-flex> :is(*, div) {
+      margin: 0;
+    }
+
+    body .is-layout-grid {
+      display: grid;
+    }
+
+    .is-layout-grid> :is(*, div) {
+      margin: 0;
+    }
+
+    :where(.wp-block-columns.is-layout-flex) {
+      gap: 2em;
+    }
+
+    :where(.wp-block-columns.is-layout-grid) {
+      gap: 2em;
+    }
+
+    :where(.wp-block-post-template.is-layout-flex) {
+      gap: 1.25em;
+    }
+
+    :where(.wp-block-post-template.is-layout-grid) {
+      gap: 1.25em;
+    }
+
+    .has-black-color {
+      color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-color {
+      color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-color {
+      color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-color {
+      color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-color {
+      color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-color {
+      color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-color {
+      color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-color {
+      color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-color {
+      color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-color {
+      color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-color {
+      color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-color {
+      color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-black-background-color {
+      background-color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-background-color {
+      background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-background-color {
+      background-color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-background-color {
+      background-color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-background-color {
+      background-color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-background-color {
+      background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-background-color {
+      background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-background-color {
+      background-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-background-color {
+      background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-background-color {
+      background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-background-color {
+      background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-background-color {
+      background-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-black-border-color {
+      border-color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-border-color {
+      border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-border-color {
+      border-color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-border-color {
+      border-color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-border-color {
+      border-color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-border-color {
+      border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-border-color {
+      border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-border-color {
+      border-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-border-color {
+      border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-border-color {
+      border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-border-color {
+      border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-border-color {
+      border-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+      background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+    }
+
+    .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+      background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+    }
+
+    .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+      background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+      background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+    }
+
+    .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+      background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+    }
+
+    .has-cool-to-warm-spectrum-gradient-background {
+      background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+    }
+
+    .has-blush-light-purple-gradient-background {
+      background: var(--wp--preset--gradient--blush-light-purple) !important;
+    }
+
+    .has-blush-bordeaux-gradient-background {
+      background: var(--wp--preset--gradient--blush-bordeaux) !important;
+    }
+
+    .has-luminous-dusk-gradient-background {
+      background: var(--wp--preset--gradient--luminous-dusk) !important;
+    }
+
+    .has-pale-ocean-gradient-background {
+      background: var(--wp--preset--gradient--pale-ocean) !important;
+    }
+
+    .has-electric-grass-gradient-background {
+      background: var(--wp--preset--gradient--electric-grass) !important;
+    }
+
+    .has-midnight-gradient-background {
+      background: var(--wp--preset--gradient--midnight) !important;
+    }
+
+    .has-small-font-size {
+      font-size: var(--wp--preset--font-size--small) !important;
+    }
+
+    .has-medium-font-size {
+      font-size: var(--wp--preset--font-size--medium) !important;
+    }
+
+    .has-large-font-size {
+      font-size: var(--wp--preset--font-size--large) !important;
+    }
+
+    .has-x-large-font-size {
+      font-size: var(--wp--preset--font-size--x-large) !important;
+    }
+
+    :where(.wp-block-post-template.is-layout-flex) {
+      gap: 1.25em;
+    }
+
+    :where(.wp-block-post-template.is-layout-grid) {
+      gap: 1.25em;
+    }
+
+    :where(.wp-block-columns.is-layout-flex) {
+      gap: 2em;
+    }
+
+    :where(.wp-block-columns.is-layout-grid) {
+      gap: 2em;
+    }
+
+    :root :where(.wp-block-pullquote) {
+      font-size: 1.5em;
+      line-height: 1.6;
+    }
+  </style>
+  <link rel="icon" href="images/logo32x32.png" sizes="32x32">
+  <link rel="icon" href="images/logo192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="images/logo180x180.png">
+  <meta name="msapplication-TileImage" content="images/logo180x180.png">
+  <noscript>
+    <style id="rocket-lazyload-nojs-css">
+      .rll-youtube-player,
+      [data-lazy-src] {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo16x16.png">
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#041020">
+  <meta name="msapplication-TileColor" content="#041020">
+  <meta name="theme-color" content="#041020">
+
+  <link data-minify="1" rel="stylesheet" media="all" href="css/style.css">
+
+  <style id="rocket-lazyrender-inline-css">
+    [data-wpr-lazyrender] {
+      content-visibility: auto;
+    }
+  </style>
+  <style id="wpr-lazyload-bg-container"></style>
+  <style id="wpr-lazyload-bg-exclusion"></style>
+  <noscript>
+    <style id="wpr-lazyload-bg-nostyle"></style>
+  </noscript>
+  <script type="application/javascript">const rocket_pairs = []; const rocket_excluded_pairs = [];</script>
+  <link href="https://www.googletagmanager.com" rel="preconnect">
+</head>
+
+<body
+  class="page-template page-template-page-servicos page-template-page-servicos-php page page-id-21 page-child parent-pageid-13">
+
+  <div class="preloader">
     <div class="spinner"></div>
-</div> 
+  </div>
 
 
-<header class="header">
- <div class="header-content clearfix">
+  <header class="header">
+    <div class="header-content clearfix">
 
-  <a href="https://www.tglsolutions.com.br" class="logo" title="TGL Solutions">
-    <img src="images/logo.png" alt="Logo Original" class="logo-default">
-  </a>
+      <a href="https://www.tglsolutions.com.br" class="logo" title="TGL Solutions">
+        <img src="images/logo.png" alt="Logo Original" class="logo-default">
+      </a>
 
-  <input type="checkbox" name="toggle-menu" id="toggle-menu" class="toggle-menu">
-  <label for="toggle-menu" class="toggle-menu">
-    <div><span></span><span></span><span></span></div>
-    <p>Menu</p><p>Fechar</p>
-  </label>
+      <input type="checkbox" name="toggle-menu" id="toggle-menu" class="toggle-menu">
+      <label for="toggle-menu" class="toggle-menu">
+        <div><span></span><span></span><span></span></div>
+        <p>Menu</p>
+        <p>Fechar</p>
+      </label>
 
-  <div class="nav"> 
-     <div class="nav-content clearfix"> 
+      <div class="nav">
+        <div class="nav-content clearfix">
 
-      <div class="menu clearfix">
-        <ul class="clearfix"> 
-          <li><a href="https://www.tglsolutions.com.br/sobre/" title="Sobre">Sobre</a></li>
-          <li><a class="has-subnav" href="#0" title="Serviços">Serviços</a></li>
-          <li><a href="https://www.tglsolutions.com.br/projetos/" title="Projetos">Projetos</a></li>
-          <li><a href="https://tglsolutions.com.br/orcamento/" rel="noopener" title="Blog">Contato</a></li>
-        </ul>  
-      </div><!-- /menu -->
+          <div class="menu clearfix">
+            <ul class="clearfix">
+              <li><a href="https://www.tglsolutions.com.br/sobre/" title="Sobre">Sobre</a></li>
+              <li><a class="has-subnav" href="#0" title="Serviços">Serviços</a></li>
+              <li><a href="https://www.tglsolutions.com.br/projetos/" title="Projetos">Projetos</a></li>
+              <li><a href="https://tglsolutions.com.br/orcamento/" rel="noopener" title="Blog">Contato</a></li>
+            </ul>
+          </div><!-- /menu -->
 
-      <div class="address clearfix">
-          <span class="title-common">Onde estamos</span>
+          <div class="address clearfix">
+            <span class="title-common">Onde estamos</span>
             <p>Avenida Paulista, 1106<br> São Paulo - SP, 01310-100
-            <a href="https://www.google.com/search?q=TGL+Solutions&stick=H4sIAAAAAAAA_-NgU1I1qLA0SU41tbRMTDE1MTU2s0yyMqgwMjUwsUhOTEk2MUoySDIxXsTKG-LuoxCcn1NakpmfVwwAqqvwzTkAAAA&hl=pt-BR&mat=Ccn4L0suzcJMElYBmzl_pfQ7fL7ha0OTbDMRaZfQS5M42s7ZyA6HsNRe8ZD1lXygBwkPCQv51Bs5H4ADXHix45HUnpcJJPfZZblz_kLtEzPZi2TSBvB2HJCvaKr32Tra9A&authuser=0" target="_blank" rel="noopener" title="Ver mapa">Ver mapa</a>
+              <a href="https://www.google.com/search?q=TGL+Solutions&stick=H4sIAAAAAAAA_-NgU1I1qLA0SU41tbRMTDE1MTU2s0yyMqgwMjUwsUhOTEk2MUoySDIxXsTKG-LuoxCcn1NakpmfVwwAqqvwzTkAAAA&hl=pt-BR&mat=Ccn4L0suzcJMElYBmzl_pfQ7fL7ha0OTbDMRaZfQS5M42s7ZyA6HsNRe8ZD1lXygBwkPCQv51Bs5H4ADXHix45HUnpcJJPfZZblz_kLtEzPZi2TSBvB2HJCvaKr32Tra9A&authuser=0"
+                target="_blank" rel="noopener" title="Ver mapa">Ver mapa</a>
             </p>
             <span class="title-common" style="margin-top: 16px;">Redes sociais</span>
-            <a href="https://www.instagram.com/tglsolutions/" target="_blank" rel="noopener" title="Instagram" class="social">
-              <svg width="32" height="32" viewBox="0 0 256 256"><path d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"></path></svg>
+            <a href="https://www.instagram.com/tglsolutions/" target="_blank" rel="noopener" title="Instagram"
+              class="social">
+              <svg width="32" height="32" viewBox="0 0 256 256">
+                <path
+                  d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z">
+                </path>
+              </svg>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61572792345451" target="_blank" rel="noopener" title="Facebook" class="social">
-              <svg width="32" height="32" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path></svg>
+            <a href="https://www.facebook.com/profile.php?id=61572792345451" target="_blank" rel="noopener"
+              title="Facebook" class="social">
+              <svg width="32" height="32" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z">
+                </path>
+              </svg>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5511975678074" target="_blank" rel="noopener" title="Whatsapp" class="social">
+            <a href="https://api.whatsapp.com/send?phone=5511975678074" target="_blank" rel="noopener" title="Whatsapp"
+              class="social">
               <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#25D366">
-                <path d="M17.472 14.437c-.297-.149-1.758-.867-2.029-.965-.271-.099-.468-.148-.666.149-.198.297-.763.964-.935 1.162-.171.198-.345.223-.642.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.133-.132.297-.346.445-.519.148-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.666-1.612-.915-2.223-.241-.579-.485-.501-.666-.511-.173-.007-.372-.009-.571-.009-.198 0-.519.074-.791.372s-1.039 1.016-1.039 2.479 1.065 2.876 1.214 3.074c.149.198 2.104 3.22 5.096 4.513.713.308 1.268.493 1.701.63.714.228 1.364.196 1.878.119.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z"/>
-                <path d="M12.007 2.002c-5.522 0-9.995 4.477-9.995 9.998a9.9 9.9 0 0 0 1.366 5.04L2 22l5.093-1.362a9.965 9.965 0 0 0 4.914 1.274c5.522 0 9.995-4.477 9.995-9.998s-4.473-9.998-9.995-9.998zm0 18.355c-1.679 0-3.318-.444-4.759-1.282l-.341-.203-3.018.807.81-2.941-.223-.352A7.93 7.93 0 0 1 4.013 12c0-4.412 3.589-8.001 7.994-8.001 4.405 0 7.994 3.589 7.994 8.001s-3.589 8.001-7.994 8.001z"/>
-              </svg>          
+                <path
+                  d="M17.472 14.437c-.297-.149-1.758-.867-2.029-.965-.271-.099-.468-.148-.666.149-.198.297-.763.964-.935 1.162-.171.198-.345.223-.642.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.133-.132.297-.346.445-.519.148-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.666-1.612-.915-2.223-.241-.579-.485-.501-.666-.511-.173-.007-.372-.009-.571-.009-.198 0-.519.074-.791.372s-1.039 1.016-1.039 2.479 1.065 2.876 1.214 3.074c.149.198 2.104 3.22 5.096 4.513.713.308 1.268.493 1.701.63.714.228 1.364.196 1.878.119.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z" />
+                <path
+                  d="M12.007 2.002c-5.522 0-9.995 4.477-9.995 9.998a9.9 9.9 0 0 0 1.366 5.04L2 22l5.093-1.362a9.965 9.965 0 0 0 4.914 1.274c5.522 0 9.995-4.477 9.995-9.998s-4.473-9.998-9.995-9.998zm0 18.355c-1.679 0-3.318-.444-4.759-1.282l-.341-.203-3.018.807.81-2.941-.223-.352A7.93 7.93 0 0 1 4.013 12c0-4.412 3.589-8.001 7.994-8.001 4.405 0 7.994 3.589 7.994 8.001s-3.589 8.001-7.994 8.001z" />
+              </svg>
             </a>
-          <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento" style="margin-top: 16px;">Faça um orçamento</a>
-      </div>
+            <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento"
+              style="margin-top: 16px;">Faça um orçamento</a>
+          </div>
 
-      <div class="submenu clearfix" style="margin-top: -60px;"> 
-        <ul class="owl-carousel owl-servicos servicos-items anime fadeInUp delay--2s clearfix">
-          <li>
-            <a href="https://www.tglsolutions.com.br/servicos/software/" title="TGL Solutions - Software">
-              <span>
-                <img width="32" height="32" src="images/software.png" alt="Fante - TGL Solutions - Software" title="Fante - TGL Solutions - Software" data-lazy-src="images/software.png"><noscript>
-                <img width="32" height="32" src="images/software.png" alt="Fante - TGL Solutions - Software" title="Fante - TGL Solutions - Software" /></noscript>
-              </span>
-              <h4 class="title-common">Software</h4>
-              <p>Desenvolvimento de soluções personalizadas, sistemas web, automação e aplicativos para otimizar processos.</p>
-            </a>
-            </li>
-            <li>
-              <a href="https://www.tglsolutions.com.br/servicos/webdesign/" title="TGL Solutions - Webdesign">
-                <span>
-                  <img width="32" height="32" src="images/webdesign.png" alt="TGL Solutions - Webdesign" title="TGL Solutions - Webdesign" data-lazy-src="images/webdesign.png"><noscript>
-                  <img width="32" height="32" src="images/webdesign.png" alt="TGL Solutions - Webdesign" title="TGL Solutions - Webdesign" /></noscript>
-                </span>
-                <h4 class="title-common">Webdesign</h4>
-                <p>Criação de interfaces digitais e sites responsivos, e-commerces, landing pages, onepages e blogs.</p>
-              </a>
-            </li>
-          <li>
-            <a href="https://www.tglsolutions.com.br/servicos/automacao/" title="TGL Solutions - Automação">
-              <span>
-                <img width="32" height="32" src="images/automacao.png" alt="Fante - TGL Solutions - Automação" title="Fante - TGL Solutions - Automação" data-lazy-src="images/automacao.png"><noscript>
-                <img width="32" height="32" src="images/automacao.png" alt="Fante - TGL Solutions - Automação" title="Fante - TGL Solutions - Automação" /></noscript>
-              </span>
-              <h4 class="title-common">Automação</h4>
-                <p>Implementação de sistemas automatizados, integrações e fluxos inteligentes para otimizar operações e reduzir custos.</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tglsolutions.com.br/servicos/aplicacao/" title="TGL Solutions - Aplicação">
-              <span>
-                <img width="32" height="32" src="images/aplicacao.png" alt="Fante - TGL Solutions - Aplicação" title="Fante - TGL Solutions - Aplicação" data-lazy-src="images/aplicacao.png"><noscript>
-                <img width="32" height="32" src="images/aplicacao.png" alt="Fante - TGL Solutions - Aplicação" title="Fante - TGL Solutions - Aplicação" /></noscript>
-              </span>
-              <h4 class="title-common">Aplicação</h4>
-              <p>Criação de soluções digitais personalizadas, sistemas CRM para vendas e dashboards interativos para análise de dados.</p>
-            </a>
-          </li>
-       </ul>
-      </div><!-- /submenu -->
+          <div class="submenu clearfix" style="margin-top: -60px;">
+            <ul class="owl-carousel owl-servicos servicos-items anime fadeInUp delay--2s clearfix">
+              <li>
+                <a href="https://www.tglsolutions.com.br/servicos/software/" title="TGL Solutions - Software">
+                  <span>
+                    <img width="32" height="32" src="images/software.png" alt="Fante - TGL Solutions - Software"
+                      title="Fante - TGL Solutions - Software" data-lazy-src="images/software.png"><noscript>
+                      <img width="32" height="32" src="images/software.png" alt="Fante - TGL Solutions - Software"
+                        title="Fante - TGL Solutions - Software" /></noscript>
+                  </span>
+                  <h4 class="title-common">Software</h4>
+                  <p>Desenvolvimento de soluções personalizadas, sistemas web, automação e aplicativos para otimizar
+                    processos.</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tglsolutions.com.br/servicos/webdesign/" title="TGL Solutions - Webdesign">
+                  <span>
+                    <img width="32" height="32" src="images/webdesign.png" alt="TGL Solutions - Webdesign"
+                      title="TGL Solutions - Webdesign" data-lazy-src="images/webdesign.png"><noscript>
+                      <img width="32" height="32" src="images/webdesign.png" alt="TGL Solutions - Webdesign"
+                        title="TGL Solutions - Webdesign" /></noscript>
+                  </span>
+                  <h4 class="title-common">Webdesign</h4>
+                  <p>Criação de interfaces digitais e sites responsivos, e-commerces, landing pages, onepages e blogs.
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tglsolutions.com.br/servicos/automacao/" title="TGL Solutions - Automação">
+                  <span>
+                    <img width="32" height="32" src="images/automacao.png" alt="Fante - TGL Solutions - Automação"
+                      title="Fante - TGL Solutions - Automação" data-lazy-src="images/automacao.png"><noscript>
+                      <img width="32" height="32" src="images/automacao.png" alt="Fante - TGL Solutions - Automação"
+                        title="Fante - TGL Solutions - Automação" /></noscript>
+                  </span>
+                  <h4 class="title-common">Automação</h4>
+                  <p>Implementação de sistemas automatizados, integrações e fluxos inteligentes para otimizar operações
+                    e reduzir custos.</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tglsolutions.com.br/servicos/aplicacao/" title="TGL Solutions - Aplicação">
+                  <span>
+                    <img width="32" height="32" src="images/aplicacao.png" alt="Fante - TGL Solutions - Aplicação"
+                      title="Fante - TGL Solutions - Aplicação" data-lazy-src="images/aplicacao.png"><noscript>
+                      <img width="32" height="32" src="images/aplicacao.png" alt="Fante - TGL Solutions - Aplicação"
+                        title="Fante - TGL Solutions - Aplicação" /></noscript>
+                  </span>
+                  <h4 class="title-common">Aplicação</h4>
+                  <p>Criação de soluções digitais personalizadas, sistemas CRM para vendas e dashboards interativos para
+                    análise de dados.</p>
+                </a>
+              </li>
+            </ul>
+          </div><!-- /submenu -->
 
-     </div>
-  </div><!-- /nav -->
+        </div>
+      </div><!-- /nav -->
 
- </div>
-</header>
-<main>
+    </div>
+  </header>
+  <main>
 
-  <div class="hero hero-servicos">
-  <div class="hero-content clearfix">
-     <div>
-      <h1 class="tag-common"><strong style="color: #0F6CBD;">Software House - Aplicações</strong></h1>
-      <h2 class="title-common" style="margin-top: -26px;">Transforme seu <br>ecossistema:</h2>
-      <h3 class="cd-headline slide typewriter title-common">
-          <span class="cd-words-wrapper" style="color: #0F6CBD;">
+    <div class="hero hero-servicos">
+      <div class="hero-content clearfix">
+        <div>
+          <h1 class="tag-common"><strong style="color: #0F6CBD;">Software House - Aplicações</strong></h1>
+          <h2 class="title-common" style="margin-top: -26px;">Transforme seu <br>ecossistema:</h2>
+          <h3 class="cd-headline slide typewriter title-common">
+            <span class="cd-words-wrapper" style="color: #0F6CBD;">
               <b class="is-visible">Dashboards</b>
               <b>Sistemas de Monitoramento</b>
               <b>ERP</b>
@@ -171,357 +554,544 @@
               <b>Plataformas de E-learning</b>
               <b>Inteligência Artificial</b>
               <b>Business Intelligence </b>
-          </span>
-      </h3>      
-        <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento" style="color: #fff;">Faça um orçamento</a>
-     </div>
-     <div class="hero-servicos-image">
-       <img width="796" height="740" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm1.png"><noscript><img width="796" height="740" src="images/crm1.png" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" /></noscript>
-       <img width="796" height="740" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm2.png"><noscript><img width="796" height="740" src="images/crm2.png" alt="TGL Solutions - CRM" title="TGL Solutions - CRM"/></noscript>
-       <svg width="2400" height="1351pt" viewBox="0 0 1800 1351" xmlns="http://www.w3.org/2000/svg"><g fill="#091b33"><path d="M0 0h450v196.98c-.16 7.05.51 14.09.37 21.14-.54 4.57-.43 9.2-.02 13.78-.73 42.37-.18 84.77-.35 127.15V450h-15.02c-21.49.52-42.88-2.54-64.03-6.09-49.91-8.94-98.28-26.42-142.35-51.49-62.35-35.36-116.07-85.8-155.24-145.83C28.69 178.62 3.13 98.27.36 16.98.28 15.21.3 13.44 0 11.7V0Z"></path><path d="M900 0h450v155.02c.04 21.02-.18 42.04.34 63.06-1.24 8.25.99 16.49.66 24.73l-.98.95c-.05 68.75-.01 137.49-.02 206.24h-170.95c-15.4-.06-30.8-.02-46.19.35-2.62-.26-5.24-.45-7.86-.36-62.99.02-125.98 0-188.97.01-9.39-.19-18.75.3-28.13.35-2.47-.16-5.02-.7-7.44.03-.37 1.8-.59 3.62-.81 5.45-.24 59.33-13.3 118.49-36.9 172.88-37.37 86.41-102.71 160.32-183.71 208.26-62.25 37.11-133.65 58.74-206.04 62.34-4.06.2-8.18-.32-12.2.39-3.57.64-7.2.24-10.8.22-.01-44.3 0-88.6 0-132.9-.12-28.38.31-56.76-.36-85.13.47-4.57.52-9.19.02-13.75.7-40.69.18-81.41.34-122.11V450h161.03c18.38-.07 36.77.24 55.14-.39 5.25.33 10.53.64 15.77.03 20.68.56 41.38.31 62.08.36 51.99-.01 103.97.02 155.96-.02.05-46.29.01-92.59.02-138.89-.11-26.4.29-52.81-.37-79.21.46-4.59.52-9.22.01-13.81.54-20.01.32-40.03.36-60.04V0ZM1350 450c21.1.08 42.2 1.57 63.09 4.55 83.13 11.65 162.63 47.44 226.65 101.7 61.91 52.09 109.4 121.13 135.72 197.66 15.79 45.71 23.97 93.98 24.54 142.33v3.8c-148.68-.11-297.35 0-446.02-.05-1.33.15-3.04-.29-3.83 1.07-.25 3.25 0 6.5.18 9.76-.68 50.06-.18 100.13-.33 150.2-.02 96.32.03 192.64-.02 288.96-149.99.03-299.98.04-449.96 0-.05-66.99 0-133.97-.03-200.95-.41-1.74.89-4.18-.98-5.28-.46-6.26 1.08-12.49 1-18.75-.04-68.42.04-136.84-.05-205.25l-.96-.95c-.4-4.59.56-9.2.77-13.79.39-1.58-.3-3.84 1.35-4.8 2.24-.32 4.52-.4 6.79-.59 24.35.64 48.71.3 73.07.38 48.01.01 96.02-.02 144.02.01 2.6.12 5.21-.11 7.81-.37 24.73.62 49.47.27 74.2.36 47.66-.01 95.32.03 142.97-.02.04-55.32.01-110.63.02-165.95-.1-12.07.27-24.15-.35-36.21 1.92-15.43 1.89-31.17-.14-46.58.93-9.72.3-19.5.49-29.24V450ZM141.38 917.47c41.43-16.91 87.95-20.87 131.69-11.52 53.61 11.21 102.43 43.07 134.62 87.33 27.88 37.87 43.23 84.7 43.31 131.72-.09 4.6.25 9.22-.4 13.8-2.25 42.99-17.4 85.18-42.87 119.87-22.46 30.77-52.84 55.72-87.45 71.67-27.38 12.75-57.36 19.55-87.51 20.66h-13.49c-44.57-1.42-88.67-16.17-124.78-42.42-34.18-24.6-61.27-58.96-77.06-98.02-19.91-48.77-21.77-104.6-5.3-154.62 9.31-28.5 24.44-55.07 44.16-77.65 23.07-26.56 52.47-47.6 85.08-60.82Z"></path></g><g fill="#163053"><path d="M666.29 0h15.4c42.44 1.39 84.47 14.74 119.56 38.74C834.73 61.44 861.94 93.31 879 130c12.81 27.52 20.17 57.68 20.64 88.07.51 4.59.45 9.22-.01 13.81-.52 34.4-9.84 68.5-25.97 98.82-19.04 35.81-47.97 66.27-82.73 87.16-32.77 19.72-70.69 31.16-108.99 31.78-5.24.61-10.52.3-15.77-.03-35.42-.91-70.47-11.05-101.33-28.39-33.27-18.67-61.64-45.98-81.61-78.49-20.41-33.2-32.23-71.82-32.88-110.83-.41-4.58-.52-9.21.02-13.78.83-51.97 21.48-103.09 55.89-141.91 29.07-33.11 68.09-57.37 110.7-68.63 16.09-4.42 32.71-6.54 49.33-7.58ZM1566.28 0H1800v231.81c-1.42 42.65-14.92 84.88-39.17 120.06-22.81 33.42-54.78 60.53-91.54 77.47-42.53 19.77-91.33 25.5-137.34 16.54-40.93-7.86-79.45-27.53-109.94-55.91-30.71-28.42-53.3-65.54-64.18-105.96-3.48-13.47-6.4-27.27-6.83-41.2.33-8.24-1.9-16.48-.66-24.73.9-51.69 21.3-102.55 55.4-141.29 26.2-30.01 60.51-52.86 98.34-65.37 20.06-6.78 41.11-10.21 62.2-11.42ZM0 450c75.35 0 150.69-.01 226.04.01 41.2.11 82.31 11.82 117.3 33.6 32.65 20.19 59.98 48.87 78.57 82.46 17.23 31.14 27.16 66.45 27.75 102.07.5 4.56.45 9.18-.02 13.75-.55 35.36-10.37 70.4-27.35 101.37-18.6 33.87-46.08 62.81-78.96 83.13-36.4 22.67-79.45 34.44-122.32 33.55-42.18-.6-84.07-13.49-119.29-36.7-33.4-21.87-60.82-52.78-78.49-88.58C8.73 745.55.97 713.23 0 680.75V450ZM900.46 450.38c2.42-.73 4.97-.19 7.44-.03 50.27.85 99.74 20.2 138.06 52.59 32.24 27.11 56.65 63.42 69.4 103.58 4.43 14.44 8.15 29.29 8.97 44.41 1.1-3.74.47-8 .67-11.93V449.99c2.62-.09 5.24.1 7.86.36 43.37.72 86.22 15.22 121.72 40 34.32 23.88 61.77 57.48 78.24 95.92 8.73 20.64 14.86 42.59 16.69 64.97 2.03 15.41 2.06 31.15.14 46.58-3.35 38.1-17.48 75.07-39.4 106.34-22.4 31.96-53.23 57.95-88.56 74.53-27.75 13.02-58.2 20.51-88.88 20.95-2.6.26-5.21.49-7.81.37V729.05c-.15-10.37.37-20.76-.42-31.1-3.33 38.82-18.05 76.43-40.66 108.07-23.47 32.78-55.88 59.08-92.84 75.21a223.706 223.706 0 0 1-67.99 17.69c-5.06.32-10.13.28-15.18.7-2.27.19-4.55.27-6.79.59-1.65.96-.96 3.22-1.35 4.8-.21 4.59-1.17 9.2-.77 13.79-.68 17.27-4.58 34.33-9.67 50.81-12.81 40.28-37.38 76.68-69.78 103.8-31.84 26.81-71.26 44.5-112.49 50.31-3.02.5-6.1.36-9.12.83 9.01.79 18.07.32 27.1.45h174.97c.08 6.26-1.46 12.49-1 18.75-.7 17.48-4.65 34.76-9.86 51.42-12.28 38.28-35.18 73.03-65.34 99.58-31.31 27.73-70.51 46.46-111.79 53.21-10.02 1.74-20.16 2.48-30.29 3.04h-15.39c-19.37-1.13-38.72-4.03-57.28-9.83-40.47-12.32-77.2-36.45-104.72-68.56-31.92-37.06-51.67-84.84-53.74-133.81.65-4.58.31-9.2.4-13.8h169.01c10.97-.22 21.99.52 32.93-.58-9.45-.1-18.74-2.05-27.95-4.02-43.86-9.87-84.47-33.43-114.97-66.44-38.61-41.26-60.55-97.52-60.02-154.04 3.6.02 7.23.42 10.8-.22 31.38.58 62.78.18 94.17.3 115-.01 230.01.03 345.02-.02.03-118.68 0-237.36.01-356.04-.06-29.37.22-58.75-.35-88.11.22-1.83.44-3.65.81-5.45ZM1350.15 901.06c.79-1.36 2.5-.92 3.83-1.07 148.67.05 297.34-.06 446.02.05V1350c-44.42-.11-88.82-6.72-131.3-19.72-77.41-23.63-148.03-68.76-202.24-128.84-65.18-71.7-106.25-164.94-114.59-261.53-1.16-9.66-.84-19.41-1.54-29.09-.18-3.26-.43-6.51-.18-9.76Z"></path></g></svg>
-     </div>
-   </div>
-  </div>
-<!-- /hero -->
-
-<div class="sobre col-af">
-  <div class="col-af-content clearfix">
-    <div class="info anime fadeInUp">
-      <h2 class="title-common">CRM Personalizado</h2>
-      <h3 class="title-common"><strong style="color: #0693e3;">Gestão de Relacionamento </strong>com o cliente de forma eficiente, centralizada e integrada. Melhore o atendimento e fidelize seus clientes.</h3>
-      <p>Entender o comportamento e as necessidades dos seus clientes é essencial para um atendimento de qualidade e para aumentar a satisfação.</p>
-      <p>Com nossa <strong style="color: #0693e3;">solução de CRM personalizado</strong>, você tem uma plataforma que centraliza todas as interações e otimiza a comunicação interna, garantindo melhores resultados.</p>
-      <p>Ofereça experiências únicas e fortaleça o relacionamento com seus clientes, aumentando a lealdade e o engajamento.</p>
-  </div>
-  
-     <div class="image">
-        <img width="796" height="740" class="anime fadeInUp delay--2s" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm3.png"><noscript><img width="796" height="740" class="anime fadeInUp delay--2s" src="images/crm3.png" alt="TGL Solutions - CRM" title="TGL Solutions - CRM"></noscript>
-        <img width="796" height="740" class="anime fadeInUp delay--4s" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm4.png"><noscript><img width="796" height="740" class="anime fadeInUp delay--4s" src="images/crm4.png" alt="TGL Solutions - CRM" title="TGL Solutions - CRM"></noscript>
-        <svg width="475pt" height="475pt" viewBox="0 0 475 475"><path d="M270.94 54.86c59.49-28.17 125.26-42.73 191.05-42.87.02 150 .01 300 .01 450.01-150 0-300 .01-450-.01.04-79.88 21.77-159.67 62.62-228.34 45.64-77.41 114.96-140.61 196.32-178.79Z"></path></svg>
-     </div>
-  </div>
-</div><!-- /sobre -->
-
-<div class="metodologia col-af">
-  <div class="col-af-content clearfix">
-     <div class="info anime fadeInUp">
-        <span class="title-common"><strong style="color: #0F6CBD;">Passo a passo</strong></span>
-        <h2 class="title-common" style="margin-top: -30px;">Metodologia</h2>
-     </div>
-     <div class="info anime fadeInUp">
-      <p class="mobile-spacing">Descubra como nossa metodologia pode transformar a gestão de seus clientes com um <strong style="color: #0F6CBD;">CRM personalizado</strong>, eficiente e integrado às suas necessidades.</p>
-      <a href="https://www.tglsolutions.com.br/orcamento/" class="btn mobile-spacing" title="Faça um orçamento">Faça um orçamento</a>
+            </span>
+          </h3>
+          <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento"
+            style="color: #fff;">Faça um orçamento</a>
+        </div>
+        <div class="hero-servicos-image">
+          <img width="796" height="740"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm1.png"><noscript><img
+              width="796" height="740" src="images/crm1.png" alt="TGL Solutions - CRM"
+              title="TGL Solutions - CRM" /></noscript>
+          <img width="796" height="740"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm2.png"><noscript><img
+              width="796" height="740" src="images/crm2.png" alt="TGL Solutions - CRM"
+              title="TGL Solutions - CRM" /></noscript>
+          <svg width="2400" height="1351pt" viewBox="0 0 1800 1351" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#091b33">
+              <path
+                d="M0 0h450v196.98c-.16 7.05.51 14.09.37 21.14-.54 4.57-.43 9.2-.02 13.78-.73 42.37-.18 84.77-.35 127.15V450h-15.02c-21.49.52-42.88-2.54-64.03-6.09-49.91-8.94-98.28-26.42-142.35-51.49-62.35-35.36-116.07-85.8-155.24-145.83C28.69 178.62 3.13 98.27.36 16.98.28 15.21.3 13.44 0 11.7V0Z">
+              </path>
+              <path
+                d="M900 0h450v155.02c.04 21.02-.18 42.04.34 63.06-1.24 8.25.99 16.49.66 24.73l-.98.95c-.05 68.75-.01 137.49-.02 206.24h-170.95c-15.4-.06-30.8-.02-46.19.35-2.62-.26-5.24-.45-7.86-.36-62.99.02-125.98 0-188.97.01-9.39-.19-18.75.3-28.13.35-2.47-.16-5.02-.7-7.44.03-.37 1.8-.59 3.62-.81 5.45-.24 59.33-13.3 118.49-36.9 172.88-37.37 86.41-102.71 160.32-183.71 208.26-62.25 37.11-133.65 58.74-206.04 62.34-4.06.2-8.18-.32-12.2.39-3.57.64-7.2.24-10.8.22-.01-44.3 0-88.6 0-132.9-.12-28.38.31-56.76-.36-85.13.47-4.57.52-9.19.02-13.75.7-40.69.18-81.41.34-122.11V450h161.03c18.38-.07 36.77.24 55.14-.39 5.25.33 10.53.64 15.77.03 20.68.56 41.38.31 62.08.36 51.99-.01 103.97.02 155.96-.02.05-46.29.01-92.59.02-138.89-.11-26.4.29-52.81-.37-79.21.46-4.59.52-9.22.01-13.81.54-20.01.32-40.03.36-60.04V0ZM1350 450c21.1.08 42.2 1.57 63.09 4.55 83.13 11.65 162.63 47.44 226.65 101.7 61.91 52.09 109.4 121.13 135.72 197.66 15.79 45.71 23.97 93.98 24.54 142.33v3.8c-148.68-.11-297.35 0-446.02-.05-1.33.15-3.04-.29-3.83 1.07-.25 3.25 0 6.5.18 9.76-.68 50.06-.18 100.13-.33 150.2-.02 96.32.03 192.64-.02 288.96-149.99.03-299.98.04-449.96 0-.05-66.99 0-133.97-.03-200.95-.41-1.74.89-4.18-.98-5.28-.46-6.26 1.08-12.49 1-18.75-.04-68.42.04-136.84-.05-205.25l-.96-.95c-.4-4.59.56-9.2.77-13.79.39-1.58-.3-3.84 1.35-4.8 2.24-.32 4.52-.4 6.79-.59 24.35.64 48.71.3 73.07.38 48.01.01 96.02-.02 144.02.01 2.6.12 5.21-.11 7.81-.37 24.73.62 49.47.27 74.2.36 47.66-.01 95.32.03 142.97-.02.04-55.32.01-110.63.02-165.95-.1-12.07.27-24.15-.35-36.21 1.92-15.43 1.89-31.17-.14-46.58.93-9.72.3-19.5.49-29.24V450ZM141.38 917.47c41.43-16.91 87.95-20.87 131.69-11.52 53.61 11.21 102.43 43.07 134.62 87.33 27.88 37.87 43.23 84.7 43.31 131.72-.09 4.6.25 9.22-.4 13.8-2.25 42.99-17.4 85.18-42.87 119.87-22.46 30.77-52.84 55.72-87.45 71.67-27.38 12.75-57.36 19.55-87.51 20.66h-13.49c-44.57-1.42-88.67-16.17-124.78-42.42-34.18-24.6-61.27-58.96-77.06-98.02-19.91-48.77-21.77-104.6-5.3-154.62 9.31-28.5 24.44-55.07 44.16-77.65 23.07-26.56 52.47-47.6 85.08-60.82Z">
+              </path>
+            </g>
+            <g fill="#163053">
+              <path
+                d="M666.29 0h15.4c42.44 1.39 84.47 14.74 119.56 38.74C834.73 61.44 861.94 93.31 879 130c12.81 27.52 20.17 57.68 20.64 88.07.51 4.59.45 9.22-.01 13.81-.52 34.4-9.84 68.5-25.97 98.82-19.04 35.81-47.97 66.27-82.73 87.16-32.77 19.72-70.69 31.16-108.99 31.78-5.24.61-10.52.3-15.77-.03-35.42-.91-70.47-11.05-101.33-28.39-33.27-18.67-61.64-45.98-81.61-78.49-20.41-33.2-32.23-71.82-32.88-110.83-.41-4.58-.52-9.21.02-13.78.83-51.97 21.48-103.09 55.89-141.91 29.07-33.11 68.09-57.37 110.7-68.63 16.09-4.42 32.71-6.54 49.33-7.58ZM1566.28 0H1800v231.81c-1.42 42.65-14.92 84.88-39.17 120.06-22.81 33.42-54.78 60.53-91.54 77.47-42.53 19.77-91.33 25.5-137.34 16.54-40.93-7.86-79.45-27.53-109.94-55.91-30.71-28.42-53.3-65.54-64.18-105.96-3.48-13.47-6.4-27.27-6.83-41.2.33-8.24-1.9-16.48-.66-24.73.9-51.69 21.3-102.55 55.4-141.29 26.2-30.01 60.51-52.86 98.34-65.37 20.06-6.78 41.11-10.21 62.2-11.42ZM0 450c75.35 0 150.69-.01 226.04.01 41.2.11 82.31 11.82 117.3 33.6 32.65 20.19 59.98 48.87 78.57 82.46 17.23 31.14 27.16 66.45 27.75 102.07.5 4.56.45 9.18-.02 13.75-.55 35.36-10.37 70.4-27.35 101.37-18.6 33.87-46.08 62.81-78.96 83.13-36.4 22.67-79.45 34.44-122.32 33.55-42.18-.6-84.07-13.49-119.29-36.7-33.4-21.87-60.82-52.78-78.49-88.58C8.73 745.55.97 713.23 0 680.75V450ZM900.46 450.38c2.42-.73 4.97-.19 7.44-.03 50.27.85 99.74 20.2 138.06 52.59 32.24 27.11 56.65 63.42 69.4 103.58 4.43 14.44 8.15 29.29 8.97 44.41 1.1-3.74.47-8 .67-11.93V449.99c2.62-.09 5.24.1 7.86.36 43.37.72 86.22 15.22 121.72 40 34.32 23.88 61.77 57.48 78.24 95.92 8.73 20.64 14.86 42.59 16.69 64.97 2.03 15.41 2.06 31.15.14 46.58-3.35 38.1-17.48 75.07-39.4 106.34-22.4 31.96-53.23 57.95-88.56 74.53-27.75 13.02-58.2 20.51-88.88 20.95-2.6.26-5.21.49-7.81.37V729.05c-.15-10.37.37-20.76-.42-31.1-3.33 38.82-18.05 76.43-40.66 108.07-23.47 32.78-55.88 59.08-92.84 75.21a223.706 223.706 0 0 1-67.99 17.69c-5.06.32-10.13.28-15.18.7-2.27.19-4.55.27-6.79.59-1.65.96-.96 3.22-1.35 4.8-.21 4.59-1.17 9.2-.77 13.79-.68 17.27-4.58 34.33-9.67 50.81-12.81 40.28-37.38 76.68-69.78 103.8-31.84 26.81-71.26 44.5-112.49 50.31-3.02.5-6.1.36-9.12.83 9.01.79 18.07.32 27.1.45h174.97c.08 6.26-1.46 12.49-1 18.75-.7 17.48-4.65 34.76-9.86 51.42-12.28 38.28-35.18 73.03-65.34 99.58-31.31 27.73-70.51 46.46-111.79 53.21-10.02 1.74-20.16 2.48-30.29 3.04h-15.39c-19.37-1.13-38.72-4.03-57.28-9.83-40.47-12.32-77.2-36.45-104.72-68.56-31.92-37.06-51.67-84.84-53.74-133.81.65-4.58.31-9.2.4-13.8h169.01c10.97-.22 21.99.52 32.93-.58-9.45-.1-18.74-2.05-27.95-4.02-43.86-9.87-84.47-33.43-114.97-66.44-38.61-41.26-60.55-97.52-60.02-154.04 3.6.02 7.23.42 10.8-.22 31.38.58 62.78.18 94.17.3 115-.01 230.01.03 345.02-.02.03-118.68 0-237.36.01-356.04-.06-29.37.22-58.75-.35-88.11.22-1.83.44-3.65.81-5.45ZM1350.15 901.06c.79-1.36 2.5-.92 3.83-1.07 148.67.05 297.34-.06 446.02.05V1350c-44.42-.11-88.82-6.72-131.3-19.72-77.41-23.63-148.03-68.76-202.24-128.84-65.18-71.7-106.25-164.94-114.59-261.53-1.16-9.66-.84-19.41-1.54-29.09-.18-3.26-.43-6.51-.18-9.76Z">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
-     <ul class="owl-carousel owl-metodologia anime fadeInUp delay--2s clearfix">
-      <li>
-        <span>
-          <img width="32" height="32" src="images/icons/doc.png" alt="Documentação - CRM - Software House" title="Documentação - CRM - Software House" data-lazy-src="images/icons/doc.png"><noscript>
-          <img width="32" height="32" src="images/icons/doc.png" alt="Documentação - CRM - Software House" title="Documentação - CRM - Software House"></noscript>
-        </span>
-        <span class="title-common">01.</span>
-        <h3 class="title-common">Documentação</h3>
-        <p>Documentação completa com briefing, planejamento, objetivos e especificações técnicas, assegurando alinhamento com as necessidades do cliente.</p>
-      </li>
-        <li>
-          <span>
-            <img width="32" height="32" src="images/icons/start.png" alt="Start - CRM - Software House" title="Start - CRM - Software House" data-lazy-src="images/icons/start.png"><noscript>
-            <img width="32" height="32" src="images/icons/start.png" alt="Start - CRM - Software House" title="Start - CRM - Software House"></noscript>
-          </span>
-          <span class="title-common">02.</span>
-          <h3 class="title-common">Start</h3>
-          <p>Imersão ao projeto através da coleta do briefing e planejamento para definição de objetivos e funcionalidades.</p>
-        </li>
-        <li>
-          <span>
-            <img width="32" height="32" src="images/icons/design.png" alt="Design - CRM - Software House" title="Design - CRM - Software House" data-lazy-src="images/icons/design.png"><noscript>
-            <img width="32" height="32" src="images/icons/design.png" alt="Design - CRM - Software House" title="Design - CRM - Software House"></noscript>
-          </span>
-          <span class="title-common">03.</span>
-          <h3 class="title-common">Design</h3>
-          <p>Design do wireframe, key visual com base na identidade da marca e criação do layout com soluções visuais.</p>
-        </li>
-        <li>
-          <span>
-            <img width="32" height="32" src="images/icons/backend.png" alt="Backend - CRM - Software House" title="Backend - CRM - Software House" data-lazy-src="images/icons/backend.png"><noscript>
-            <img width="32" height="32" src="images/icons/backend.png" alt="Backend - CRM - Software House" title="Backend - CRM - Software House"></noscript></span>
-          <span class="title-common">04.</span>
-          <h3 class="title-common">Back-end</h3>
-          <p>Desenvolvimento do núcleo da aplicação, com foco na integração de sistemas, gerenciamento de dados, gateways de pagamento, checkout seguro e funcionalidades personalizadas para atender às necessidades do seu negócio.</p>        </li>
-        <li>
-          <span>
-            <img width="32" height="32" src="images/icons/frontend.png" alt="Front-end - CRM - Software House" title="Front-end - CRM - Software House" data-lazy-src="images/icons/frontend.png"><noscript>
-            <img width="32" height="32" src="images/icons/frontend.png" alt="Front-end - CRM - Software House" title="Front-end - CRM - Software House"></noscript></span>
-          <span class="title-common">05.</span>
-          <h3 class="title-common">Front-end</h3>
-          <p>Programação e codificação da loja com suas integrações, gateways de pagamento, checkout e outras funcionalidades.</p>
-        </li>
-        <li>
-          <span>
-            <img width="32" height="32" src="images/icons/end.png" alt="Entrega - CRM - Software House" title="Entrega - CRM - Software House" data-lazy-src="images/icons/end.png"><noscript>
-            <img width="32" height="32" src="images/icons/end.png" alt="Entrega - CRM - Software House" title="Entrega - CRM - Software House"></noscript></span>
-          <span class="title-common">06.</span>
-          <h3 class="title-common">Entrega</h3>
-          <p>Revisão final, validações e publicação do seu projeto com acompanhamento dos acessos e do desempenho.</p>
-        </li>
-     </ul>
-  </div>
-</div><!-- /metodologia -->
+    <!-- /hero -->
 
-<style>
-  @media (max-width: 768px) { 
-    .mobile-spacing {
-        align-items: center;
-        margin-right: 30px;
-        display: block; /* Garante que o espaçamento seja aplicado corretamente */
-    }
-}
-</style>
+    <div class="sobre col-af">
+      <div class="col-af-content clearfix">
+        <div class="info anime fadeInUp">
+          <h2 class="title-common">CRM Personalizado</h2>
+          <h3 class="title-common"><strong style="color: #0693e3;">Gestão de Relacionamento </strong>com o cliente de
+            forma eficiente, centralizada e integrada. Melhore o atendimento e fidelize seus clientes.</h3>
+          <p>Entender o comportamento e as necessidades dos seus clientes é essencial para um atendimento de qualidade e
+            para aumentar a satisfação.</p>
+          <p>Com nossa <strong style="color: #0693e3;">solução de CRM personalizado</strong>, você tem uma plataforma
+            que centraliza todas as interações e otimiza a comunicação interna, garantindo melhores resultados.</p>
+          <p>Ofereça experiências únicas e fortaleça o relacionamento com seus clientes, aumentando a lealdade e o
+            engajamento.</p>
+        </div>
 
-<div class="sobre destaques col-af">
-  <div class="col-af-content clearfix">
-     <div class="info anime fadeInUp">
-        <h3 class="title-common">Conheça os principais recursos que oferecemos em uma plataforma de CRM</strong>:</h3>
-     </div>
-     <div class="info anime fadeInUp delay--2s">
-        <p>Plataforma de CRM completa, gerenciável e customizada para otimizar a gestão de clientes de forma simples e eficiente.</p>
-     </div>
-     <ul class="clearfix">
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/clientes.png" alt="CRM - Gestão de clientes" title="CRM - Gestão de clientes" data-lazy-src="images/icons/clientes.png"><noscript>
-          <img width="32" height="32" src="images/icons/clientes.png" alt="CRM - Gestão de clientes" title="CRM - Gestão de clientes"></noscript>
+        <div class="image">
+          <img width="796" height="740" class="anime fadeInUp delay--2s"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm3.png"><noscript><img
+              width="796" height="740" class="anime fadeInUp delay--2s" src="images/crm3.png" alt="TGL Solutions - CRM"
+              title="TGL Solutions - CRM"></noscript>
+          <img width="796" height="740" class="anime fadeInUp delay--4s"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm4.png"><noscript><img
+              width="796" height="740" class="anime fadeInUp delay--4s" src="images/crm4.png" alt="TGL Solutions - CRM"
+              title="TGL Solutions - CRM"></noscript>
+          <svg width="475pt" height="475pt" viewBox="0 0 475 475">
+            <path
+              d="M270.94 54.86c59.49-28.17 125.26-42.73 191.05-42.87.02 150 .01 300 .01 450.01-150 0-300 .01-450-.01.04-79.88 21.77-159.67 62.62-228.34 45.64-77.41 114.96-140.61 196.32-178.79Z">
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div><!-- /sobre -->
+
+    <div class="metodologia col-af">
+      <div class="col-af-content clearfix">
+        <div class="info anime fadeInUp">
+          <span class="title-common"><strong style="color: #0F6CBD;">Passo a passo</strong></span>
+          <h2 class="title-common" style="margin-top: -30px;">Metodologia</h2>
+        </div>
+        <div class="info anime fadeInUp">
+          <p class="mobile-spacing">Descubra como nossa metodologia pode transformar a gestão de seus clientes com um
+            <strong style="color: #0F6CBD;">CRM personalizado</strong>, eficiente e integrado às suas necessidades.
+          </p>
+          <a href="https://www.tglsolutions.com.br/orcamento/" class="btn mobile-spacing" title="Faça um orçamento">Faça
+            um orçamento</a>
+        </div>
+        <ul class="owl-carousel owl-metodologia anime fadeInUp delay--2s clearfix">
+          <li>
+            <span>
+              <img width="32" height="32" src="images/icons/doc.png" alt="Documentação - CRM - Software House"
+                title="Documentação - CRM - Software House" data-lazy-src="images/icons/doc.png"><noscript>
+                <img width="32" height="32" src="images/icons/doc.png" alt="Documentação - CRM - Software House"
+                  title="Documentação - CRM - Software House"></noscript>
+            </span>
+            <span class="title-common">01.</span>
+            <h3 class="title-common">Documentação</h3>
+            <p>Documentação completa com briefing, planejamento, objetivos e especificações técnicas, assegurando
+              alinhamento com as necessidades do cliente.</p>
+          </li>
+          <li>
+            <span>
+              <img width="32" height="32" src="images/icons/start.png" alt="Start - CRM - Software House"
+                title="Start - CRM - Software House" data-lazy-src="images/icons/start.png"><noscript>
+                <img width="32" height="32" src="images/icons/start.png" alt="Start - CRM - Software House"
+                  title="Start - CRM - Software House"></noscript>
+            </span>
+            <span class="title-common">02.</span>
+            <h3 class="title-common">Start</h3>
+            <p>Imersão ao projeto através da coleta do briefing e planejamento para definição de objetivos e
+              funcionalidades.</p>
+          </li>
+          <li>
+            <span>
+              <img width="32" height="32" src="images/icons/design.png" alt="Design - CRM - Software House"
+                title="Design - CRM - Software House" data-lazy-src="images/icons/design.png"><noscript>
+                <img width="32" height="32" src="images/icons/design.png" alt="Design - CRM - Software House"
+                  title="Design - CRM - Software House"></noscript>
+            </span>
+            <span class="title-common">03.</span>
+            <h3 class="title-common">Design</h3>
+            <p>Design do wireframe, key visual com base na identidade da marca e criação do layout com soluções visuais.
+            </p>
+          </li>
+          <li>
+            <span>
+              <img width="32" height="32" src="images/icons/backend.png" alt="Backend - CRM - Software House"
+                title="Backend - CRM - Software House" data-lazy-src="images/icons/backend.png"><noscript>
+                <img width="32" height="32" src="images/icons/backend.png" alt="Backend - CRM - Software House"
+                  title="Backend - CRM - Software House"></noscript></span>
+            <span class="title-common">04.</span>
+            <h3 class="title-common">Back-end</h3>
+            <p>Desenvolvimento do núcleo da aplicação, com foco na integração de sistemas, gerenciamento de dados,
+              gateways de pagamento, checkout seguro e funcionalidades personalizadas para atender às necessidades do
+              seu negócio.</p>
+          </li>
+          <li>
+            <span>
+              <img width="32" height="32" src="images/icons/frontend.png" alt="Front-end - CRM - Software House"
+                title="Front-end - CRM - Software House" data-lazy-src="images/icons/frontend.png"><noscript>
+                <img width="32" height="32" src="images/icons/frontend.png" alt="Front-end - CRM - Software House"
+                  title="Front-end - CRM - Software House"></noscript></span>
+            <span class="title-common">05.</span>
+            <h3 class="title-common">Front-end</h3>
+            <p>Programação e codificação da loja com suas integrações, gateways de pagamento, checkout e outras
+              funcionalidades.</p>
+          </li>
+          <li>
+            <span>
+              <img width="32" height="32" src="images/icons/end.png" alt="Entrega - CRM - Software House"
+                title="Entrega - CRM - Software House" data-lazy-src="images/icons/end.png"><noscript>
+                <img width="32" height="32" src="images/icons/end.png" alt="Entrega - CRM - Software House"
+                  title="Entrega - CRM - Software House"></noscript></span>
+            <span class="title-common">06.</span>
+            <h3 class="title-common">Entrega</h3>
+            <p>Revisão final, validações e publicação do seu projeto com acompanhamento dos acessos e do desempenho.</p>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /metodologia -->
+
+    <style>
+      @media (max-width: 768px) {
+        .mobile-spacing {
+          align-items: center;
+          margin-right: 30px;
+          display: block;
+          /* Garante que o espaçamento seja aplicado corretamente */
+        }
+      }
+    </style>
+
+    <div class="sobre destaques col-af">
+      <div class="col-af-content clearfix">
+        <div class="info anime fadeInUp">
+          <h3 class="title-common">Conheça os principais recursos que oferecemos em uma plataforma de CRM</strong>:</h3>
+        </div>
+        <div class="info anime fadeInUp delay--2s">
+          <p>Plataforma de CRM completa, gerenciável e customizada para otimizar a gestão de clientes de forma simples e
+            eficiente.</p>
+        </div>
+        <ul class="clearfix">
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/clientes.png" alt="CRM - Gestão de clientes"
+              title="CRM - Gestão de clientes" data-lazy-src="images/icons/clientes.png"><noscript>
+              <img width="32" height="32" src="images/icons/clientes.png" alt="CRM - Gestão de clientes"
+                title="CRM - Gestão de clientes"></noscript>
             <h4 class="title-common">Gestão de clientes</h4>
             <p>Gerencie informações de clientes de forma centralizada e eficiente.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/automacao.png" alt="CRM - Automação de vendas" title="CRM - Automação de vendas" data-lazy-src="images/icons/automacao.png"><noscript>
-          <img width="32" height="32" src="images/icons/automacao.png" alt="CRM - Automação de vendas" title="CRM - Automação de vendas"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/automacao.png" alt="CRM - Automação de vendas"
+              title="CRM - Automação de vendas" data-lazy-src="images/icons/automacao.png"><noscript>
+              <img width="32" height="32" src="images/icons/automacao.png" alt="CRM - Automação de vendas"
+                title="CRM - Automação de vendas"></noscript>
             <h4 class="title-common">Automação de vendas</h4>
             <p>Automatize processos de vendas e maximize a produtividade.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/relatorio.png" alt="CRM - Relatórios avançados" title="CRM - Relatórios avançados" data-lazy-src="images/icons/relatorio.png"><noscript>
-          <img width="32" height="32" src="images/icons/relatorio.png" alt="CRM - Relatórios avançados" title="CRM - Relatórios avançados"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/relatorio.png" alt="CRM - Relatórios avançados"
+              title="CRM - Relatórios avançados" data-lazy-src="images/icons/relatorio.png"><noscript>
+              <img width="32" height="32" src="images/icons/relatorio.png" alt="CRM - Relatórios avançados"
+                title="CRM - Relatórios avançados"></noscript>
             <h4 class="title-common">Relatórios avançados</h4>
             <p>Acompanhe indicadores chave de desempenho (KPIs) em tempo real.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/atendimento.png" alt="CRM - Atendimento otimizado" title="CRM - Atendimento otimizado" data-lazy-src="images/icons/atendimento.png"><noscript>
-          <img width="32" height="32" src="images/icons/atendimento.png" alt="CRM - Atendimento otimizado" title="CRM - Atendimento otimizado"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/atendimento.png" alt="CRM - Atendimento otimizado"
+              title="CRM - Atendimento otimizado" data-lazy-src="images/icons/atendimento.png"><noscript>
+              <img width="32" height="32" src="images/icons/atendimento.png" alt="CRM - Atendimento otimizado"
+                title="CRM - Atendimento otimizado"></noscript>
             <h4 class="title-common">Atendimento otimizado</h4>
             <p>Ofereça um atendimento exclusivo para cada cliente, com base no histórico de interações.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/dados.png" alt="CRM - Análise de Dados" title="CRM - Análise de Dados" data-lazy-src="images/icons/dados.png"><noscript>
-          <img width="32" height="32" src="images/icons/dados.png" alt="CRM - Análise de Dados" title="CRM - Análise de Dados"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/dados.png" alt="CRM - Análise de Dados"
+              title="CRM - Análise de Dados" data-lazy-src="images/icons/dados.png"><noscript>
+              <img width="32" height="32" src="images/icons/dados.png" alt="CRM - Análise de Dados"
+                title="CRM - Análise de Dados"></noscript>
             <h4 class="title-common">Análise de Dados</h4>
             <p>Identifique padrões e tome decisões mais assertivas para sua empresa.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/segmentacao.png" alt="CRM - Segmentação eficaz" title="CRM - Segmentação eficaz" data-lazy-src="images/icons/segmentacao.png"><noscript>
-          <img width="32" height="32" src="images/icons/segmentacao.png" alt="CRM - Segmentação eficaz" title="CRM - Segmentação eficaz"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/segmentacao.png" alt="CRM - Segmentação eficaz"
+              title="CRM - Segmentação eficaz" data-lazy-src="images/icons/segmentacao.png"><noscript>
+              <img width="32" height="32" src="images/icons/segmentacao.png" alt="CRM - Segmentação eficaz"
+                title="CRM - Segmentação eficaz"></noscript>
             <h4 class="title-common">Segmentação eficaz</h4>
             <p>Divida sua base de clientes de forma precisa para ações mais eficazes.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/dadostemporeal.png" alt="CRM - Dados em tempo real" title="CRM - Dados em tempo real" data-lazy-src="images/icons/dadostemporeal.png"><noscript>
-          <img width="32" height="32" src="images/icons/dadostemporeal.png" alt="CRM - Dados em tempo real" title="CRM - Dados em tempo real"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/dadostemporeal.png" alt="CRM - Dados em tempo real"
+              title="CRM - Dados em tempo real" data-lazy-src="images/icons/dadostemporeal.png"><noscript>
+              <img width="32" height="32" src="images/icons/dadostemporeal.png" alt="CRM - Dados em tempo real"
+                title="CRM - Dados em tempo real"></noscript>
             <h4 class="title-common">Dados em Tempo Real</h4>
             <p>Acompanhe as interações e comportamentos dos clientes à medida que acontecem.</p>
-        </li>
-        <li class="anime fadeInUp">
-          <img width="32" height="32" src="images/icons/visualizacao.png" alt="CRM - Visualização de Dados" title="CRM - Visualização de Dados" data-lazy-src="images/icons/visualizacao.png"><noscript>
-          <img width="32" height="32" src="images/icons/visualizacao.png" alt="CRM - Visualização de Dados" title="CRM - Visualização de Dados"></noscript>
+          </li>
+          <li class="anime fadeInUp">
+            <img width="32" height="32" src="images/icons/visualizacao.png" alt="CRM - Visualização de Dados"
+              title="CRM - Visualização de Dados" data-lazy-src="images/icons/visualizacao.png"><noscript>
+              <img width="32" height="32" src="images/icons/visualizacao.png" alt="CRM - Visualização de Dados"
+                title="CRM - Visualização de Dados"></noscript>
             <h4 class="title-common">Visualização de Dados</h4>
             <p>Transforme dados brutos em gráficos e relatórios interativos de fácil compreensão.</p>
-        </li>
-     </ul>
-  </div>
-</div><!-- /sobre -->
+          </li>
+        </ul>
+      </div>
+    </div><!-- /sobre -->
 
-<div data-wpr-lazyrender="1" class="sobre reverse col-af">
-  <div class="col-af-content clearfix">
-    <div class="info anime fadeInUp">
-      <h3 class="tag-common"><strong style="color: #0F6CBD;">Gestão de Relacionamento com o Cliente (CRM)</strong></h3>
-      <h2 class="title-common" style="margin-top: -24px;">Fortaleça o relacionamento com seus clientes</h2>
-      <h3 class="title-common">Organize, automatize e otimize suas interações para fidelizar e atrair novos clientes.</h3>
-      <p>Com um sistema de CRM integrado, sua empresa pode acompanhar cada etapa do relacionamento com seus clientes, desde o primeiro contato até a retenção e fidelização, de forma personalizada e eficiente.</p>
-      <p>Através de dados centralizados e ferramentas inteligentes, o CRM permite que você identifique oportunidades, melhore o atendimento e tome decisões estratégicas baseadas em análises precisas e comportamentos de compra.</p>
-    </div>
-     <div class="image">
-        <img width="796" height="740" class="anime fadeInUp delay--2s" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm5.png"><noscript><img width="796" height="740" class="anime fadeInUp delay--2s" src="images/crm5.png" alt="TGL Solutions - CRM" title="TGL Solutions - CRM"></noscript>
-        <img width="796" height="740" class="anime fadeInUp delay--4s" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm6.png"><noscript><img width="796" height="740" class="anime fadeInUp delay--4s" src="images/crm6.png" alt="TGL Solutions - CRM" title="TGL Solutions - CRM"></noscript>
-        <img width="796" height="740" class="anime fadeInUp delay--6s" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E" alt="Agência e-commerce e Plataforma e-commerce" title="TGL Solutions - CRM" data-lazy-src="images/crm7.png"><noscript><img width="796" height="740" class="anime fadeInUp delay--6s" src="images/crm7.png" alt="Agência e-commerce e Plataforma e-commerce" title="TGL Solutions - CRM"></noscript>
-        <svg width="475pt" height="475pt" viewBox="0 0 475 475"><path d="M216.01 12.99c30.61-2.86 61.83.56 91.05 10.15 56.55 18.28 104.88 60.13 131.28 113.35 15.59 31.04 23.68 65.77 23.66 100.5-63.66.02-127.31 0-190.97.01-10.68-.18-21.37.38-32.03.45 1.6.4 3.31.26 4.95.12 25.34-.1 50.48 5.55 74.1 14.5 43.39 16.67 81.24 47.26 106.79 86.07 24.22 36.43 37.24 80.11 37.16 123.85-150 .02-300 .02-450 0 .01-27.64 5.08-55.29 15.07-81.07 23.21-60.82 74.21-110.28 135.83-131.36 22.99-8.03 47.39-12.63 71.78-11.94v-.24c-27.21-.58-54.48-.34-81.72-.38-46.99-.01-93.97.01-140.96-.01-.01-32.69 7.13-65.38 21-95 17.57-37.78 45.9-70.45 80.77-93.25 30.47-20.05 65.91-32.46 102.24-35.75Z"></path></svg>
-     </div>
-  </div>
-</div><!-- /sobre -->
+    <div data-wpr-lazyrender="1" class="sobre reverse col-af">
+      <div class="col-af-content clearfix">
+        <div class="info anime fadeInUp">
+          <h3 class="tag-common"><strong style="color: #0F6CBD;">Gestão de Relacionamento com o Cliente (CRM)</strong>
+          </h3>
+          <h2 class="title-common" style="margin-top: -24px;">Fortaleça o relacionamento com seus clientes</h2>
+          <h3 class="title-common">Organize, automatize e otimize suas interações para fidelizar e atrair novos
+            clientes.</h3>
+          <p>Com um sistema de CRM integrado, sua empresa pode acompanhar cada etapa do relacionamento com seus
+            clientes, desde o primeiro contato até a retenção e fidelização, de forma personalizada e eficiente.</p>
+          <p>Através de dados centralizados e ferramentas inteligentes, o CRM permite que você identifique
+            oportunidades, melhore o atendimento e tome decisões estratégicas baseadas em análises precisas e
+            comportamentos de compra.</p>
+        </div>
+        <div class="image">
+          <img width="796" height="740" class="anime fadeInUp delay--2s"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm5.png"><noscript><img
+              width="796" height="740" class="anime fadeInUp delay--2s" src="images/crm5.png" alt="TGL Solutions - CRM"
+              title="TGL Solutions - CRM"></noscript>
+          <img width="796" height="740" class="anime fadeInUp delay--4s"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="TGL Solutions - CRM" title="TGL Solutions - CRM" data-lazy-src="images/crm6.png"><noscript><img
+              width="796" height="740" class="anime fadeInUp delay--4s" src="images/crm6.png" alt="TGL Solutions - CRM"
+              title="TGL Solutions - CRM"></noscript>
+          <img width="796" height="740" class="anime fadeInUp delay--6s"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20796%20740'%3E%3C/svg%3E"
+            alt="Agência e-commerce e Plataforma e-commerce" title="TGL Solutions - CRM"
+            data-lazy-src="images/crm7.png"><noscript><img width="796" height="740" class="anime fadeInUp delay--6s"
+              src="images/crm7.png" alt="Agência e-commerce e Plataforma e-commerce"
+              title="TGL Solutions - CRM"></noscript>
+          <svg width="475pt" height="475pt" viewBox="0 0 475 475">
+            <path
+              d="M216.01 12.99c30.61-2.86 61.83.56 91.05 10.15 56.55 18.28 104.88 60.13 131.28 113.35 15.59 31.04 23.68 65.77 23.66 100.5-63.66.02-127.31 0-190.97.01-10.68-.18-21.37.38-32.03.45 1.6.4 3.31.26 4.95.12 25.34-.1 50.48 5.55 74.1 14.5 43.39 16.67 81.24 47.26 106.79 86.07 24.22 36.43 37.24 80.11 37.16 123.85-150 .02-300 .02-450 0 .01-27.64 5.08-55.29 15.07-81.07 23.21-60.82 74.21-110.28 135.83-131.36 22.99-8.03 47.39-12.63 71.78-11.94v-.24c-27.21-.58-54.48-.34-81.72-.38-46.99-.01-93.97.01-140.96-.01-.01-32.69 7.13-65.38 21-95 17.57-37.78 45.9-70.45 80.77-93.25 30.47-20.05 65.91-32.46 102.24-35.75Z">
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div><!-- /sobre -->
 
-<div data-wpr-lazyrender="1" class="projetos col-af">
-  <div class="col-af-content clearfix">
-     <div class="info anime fadeInUp" style="margin-top: 30px;">
-        <span class="title-common"><strong style="color: #0F6CBD;">Plataforma CRM</strong></span>
-        <h2 class="title-common" style="margin-top: -30px;">Nossos projetos</h2>
-     </div>
-     <div class="info anime fadeInUp">
-        <p>Plataforma de <strong style="color: #0F6CBD;">CRM</strong> completa, gerenciável e customizada para otimizar a gestão de clientes de forma simples e eficiente.</p>
-        <a href="https://www.tglsolutions.com.br/projetos/" class="btn" title="Conheça mais projetos" style="color: #fff;">Conheça mais projetos</a>
-     </div>
+    <div data-wpr-lazyrender="1" class="projetos col-af">
+      <div class="col-af-content clearfix">
+        <div class="info anime fadeInUp" style="margin-top: 30px;">
+          <span class="title-common"><strong style="color: #0F6CBD;">Plataforma CRM</strong></span>
+          <h2 class="title-common" style="margin-top: -30px;">Nossos projetos</h2>
+        </div>
+        <div class="info anime fadeInUp">
+          <p>Plataforma de <strong style="color: #0F6CBD;">CRM</strong> completa, gerenciável e customizada para
+            otimizar a gestão de clientes de forma simples e eficiente.</p>
+          <a href="https://www.tglsolutions.com.br/projetos/" class="btn" title="Conheça mais projetos"
+            style="color: #fff;">Conheça mais projetos</a>
+        </div>
 
-     <div class="portfolioContainer portfolio clearfix">
+        <div class="portfolioContainer portfolio clearfix">
 
-       <a class="todos category-ecommerce" title="Arthur Bravery Malted Whisky">
-         <img width="560" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" data-lazy-src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-arthur_agencia-fante.jpg"><noscript><img width="560" height="438" src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-arthur_agencia-fante.jpg" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" /></noscript>
-         <span><div>
-           <span class="tag-common">crm</span>
-           <h3 class="title-common">Arthur Bravery Malted Whisky</h3>
-         </div></span>
-       </a><!-- /item -->
+          <a class="todos category-ecommerce" title="Arthur Bravery Malted Whisky">
+            <img width="560" height="438"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E"
+              alt="TGL Solutions - Software House" title="TGL Solutions - Software House"
+              data-lazy-src="images/ecommerce-arthur_agencia-fante.jpg"><noscript><img width="560" height="438"
+                src="images/ecommerce-arthur_agencia-fante.jpg" alt="TGL Solutions - Software House"
+                title="TGL Solutions - Software House" /></noscript>
+            <span>
+              <div>
+                <span class="tag-common">crm</span>
+                <h3 class="title-common">Arthur Bravery Malted Whisky</h3>
+              </div>
+            </span>
+          </a><!-- /item -->
 
-       <a class="todos category-social category-ecommerce" title="Topz">
-         <img width="560" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" data-lazy-src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-topz_agencia-fante.jpg"><noscript><img width="560" height="438" src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-topz_agencia-fante.jpg" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" /></noscript>
-         <span><div>
-           <span class="tag-common">crm</span>
-           <h3 class="title-common">Topz</h3>
-         </div></span>
-       </a><!-- /item -->
+          <a class="todos category-social category-ecommerce" title="Topz">
+            <img width="560" height="438"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E"
+              alt="TGL Solutions - Software House" title="TGL Solutions - Software House"
+              data-lazy-src="images/ecommerce-topz_agencia-fante.jpg"><noscript><img width="560" height="438"
+                src="images/ecommerce-topz_agencia-fante.jpg" alt="TGL Solutions - Software House"
+                title="TGL Solutions - Software House" /></noscript>
+            <span>
+              <div>
+                <span class="tag-common">crm</span>
+                <h3 class="title-common">Topz</h3>
+              </div>
+            </span>
+          </a><!-- /item -->
 
-       <a class="todos category-ecommerce" title="Fourest">
-         <img width="560" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" data-lazy-src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-fourest_agencia-fante.jpg"><noscript><img width="560" height="438" src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-fourest_agencia-fante.jpg" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" /></noscript>
-         <span><div>
-           <span class="tag-common">crm</span>
-           <h3 class="title-common">Fourest</h3>
-         </div></span>
-       </a><!-- /item -->
+          <a class="todos category-ecommerce" title="Fourest">
+            <img width="560" height="438"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E"
+              alt="TGL Solutions - Software House" title="TGL Solutions - Software House"
+              data-lazy-src="images/ecommerce-fourest_agencia-fante.jpg"><noscript><img width="560" height="438"
+                src="images/ecommerce-fourest_agencia-fante.jpg" alt="TGL Solutions - Software House"
+                title="TGL Solutions - Software House" /></noscript>
+            <span>
+              <div>
+                <span class="tag-common">crm</span>
+                <h3 class="title-common">Fourest</h3>
+              </div>
+            </span>
+          </a><!-- /item -->
 
-       <a class="todos category-ecommerce" title="Club du Taste Vin">
-         <img width="560" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" data-lazy-src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-tastevin_agencia-fante.jpg"><noscript><img width="560" height="438" src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-tastevin_agencia-fante.jpg" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" /></noscript>
-         <span><div>
-           <span class="tag-common">sap</span>
-           <h3 class="title-common">Club du Taste Vin</h3>
-         </div></span>
-       </a><!-- /item -->
+          <a class="todos category-ecommerce" title="Club du Taste Vin">
+            <img width="560" height="438"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E"
+              alt="TGL Solutions - Software House" title="TGL Solutions - Software House"
+              data-lazy-src="images/ecommerce-tastevin_agencia-fante.jpg"><noscript><img width="560" height="438"
+                src="images/ecommerce-tastevin_agencia-fante.jpg" alt="TGL Solutions - Software House"
+                title="TGL Solutions - Software House" /></noscript>
+            <span>
+              <div>
+                <span class="tag-common">sap</span>
+                <h3 class="title-common">Club du Taste Vin</h3>
+              </div>
+            </span>
+          </a><!-- /item -->
 
-       <a class="todos category-ecommerce" title="Pano de Fundo">
-         <img width="560" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" data-lazy-src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-pano_agencia-fante.jpg"><noscript><img width="560" height="438" src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-pano_agencia-fante.jpg" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" /></noscript>
-         <span><div>
-           <span class="tag-common">dashboard</span>
-           <h3 class="title-common">Pano de Fundo</h3>
-         </div></span>
-       </a><!-- /item -->
+          <a class="todos category-ecommerce" title="Pano de Fundo">
+            <img width="560" height="438"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E"
+              alt="TGL Solutions - Software House" title="TGL Solutions - Software House"
+              data-lazy-src="images/ecommerce-pano_agencia-fante.jpg"><noscript><img width="560" height="438"
+                src="images/ecommerce-pano_agencia-fante.jpg" alt="TGL Solutions - Software House"
+                title="TGL Solutions - Software House" /></noscript>
+            <span>
+              <div>
+                <span class="tag-common">dashboard</span>
+                <h3 class="title-common">Pano de Fundo</h3>
+              </div>
+            </span>
+          </a><!-- /item -->
 
-       <a class="todos category-ecommerce" title="Homeo-Vita Saúde Animal">
-         <img width="560" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" data-lazy-src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-homeo_agencia-fante.jpg"><noscript><img width="560" height="438" src="https://www.agenciafante.com.br/wp-content/themes/fante/images/cover/ecommerce-homeo_agencia-fante.jpg" alt="Fante Agência e-commerce e Plataforma e-commerce" title="Fante Agência e-commerce e Plataforma e-commerce" /></noscript>
-         <span><div>
-           <span class="tag-common">ia</span>
-           <h3 class="title-common">Homeo-Vita Saúde Animal</h3>
-         </div></span>
-       </a><!-- /item -->
+          <a class="todos category-ecommerce" title="Homeo-Vita Saúde Animal">
+            <img width="560" height="438"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20438'%3E%3C/svg%3E"
+              alt="TGL Solutions - Software House" title="TGL Solutions - Software House"
+              data-lazy-src="images/ecommerce-homeo_agencia-fante.jpg"><noscript><img width="560" height="438"
+                src="images/ecommerce-homeo_agencia-fante.jpg" alt="TGL Solutions - Software House"
+                title="TGL Solutions - Software House" /></noscript>
+            <span>
+              <div>
+                <span class="tag-common">ia</span>
+                <h3 class="title-common">Homeo-Vita Saúde Animal</h3>
+              </div>
+            </span>
+          </a><!-- /item -->
 
-     </div><!--/portfolioContainer-->
-  </div>
-</div><!-- /projetos -->
+        </div><!--/portfolioContainer-->
+      </div>
+    </div><!-- /projetos -->
 
-<div data-wpr-lazyrender="1" class="cta col-af">
-  <div class="col-af-content clearfix">
-    <div class="anime fadeInUp">
-      <span class="title-common" style="margin-top: 10px;"><strong style="color: #0F6CBD;">Uma parceria de projetos incríveis</strong></span>
-      <h2 class="title-common" style="margin-top: -26px;">Ideias extraordinárias ganham vida aqui.</h2>
-    </div>
-    <div class="anime fadeInUp delay--2s" style="margin-top: 9px;">
-      <p>Seu projeto merece estar nas melhores mãos. Conte com nossa software house para transformar sua visão em sucesso. Vamos começar hoje mesmo!</p>
-      <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento" style="margin-top: -30px; color: #fff;">Faça um orçamento</a>
-    </div>
-  </div>
-</div><!-- /cta -->
-</main>
+    <div data-wpr-lazyrender="1" class="cta col-af">
+      <div class="col-af-content clearfix">
+        <div class="anime fadeInUp">
+          <span class="title-common" style="margin-top: 10px;"><strong style="color: #0F6CBD;">Uma parceria de projetos
+              incríveis</strong></span>
+          <h2 class="title-common" style="margin-top: -26px;">Ideias extraordinárias ganham vida aqui.</h2>
+        </div>
+        <div class="anime fadeInUp delay--2s" style="margin-top: 9px;">
+          <p>Seu projeto merece estar nas melhores mãos. Conte com nossa software house para transformar sua visão em
+            sucesso. Vamos começar hoje mesmo!</p>
+          <a href="https://www.tglsolutions.com.br/orcamento/" class="btn" title="Faça um orçamento"
+            style="margin-top: -30px; color: #fff;">Faça um orçamento</a>
+        </div>
+      </div>
+    </div><!-- /cta -->
+  </main>
 
-<footer data-wpr-lazyrender="1" class="footer col-af">
-  <div class="col-af-content clearfix" >
-    <div>
-      <a href="https://www.tglsolutions.com.br" class="logo" title="Fante">
-        <img src="images/logo-alt.png" alt="Logo - Footer">
-      </a>
-      <p class="privacy">TGL Solutions © 2021 - 2024</p><br>
-      <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" title="Política de privacidade" class="privacy">Política de privacidade</a>
-    </div>
-    <div>
-      <span class="title-common" style="color: #0F6CBD;">Onde estamos</span>
-      <p>Avenida Paulista, 1106<br> 
-      São Paulo - SP, 01310-100
-      <a href="https://maps.app.goo.gl/kkERgmvi9crFVY6g8" target="_blank" rel="noopener" title="Ver mapa" style="color: #0F6CBD;">Ver mapa</a>
-      </p>
-    </div>
-    <div>
-      <span class="title-common" style="color: #0F6CBD;">Redes sociais</span>
-        <a href="https://www.instagram.com/tglsolutions/" target="_blank" rel="noopener" title="Instagram" class="social">
-          <svg width="32" height="32" viewBox="0 0 256 256"><path d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"></path></svg>
+  <footer data-wpr-lazyrender="1" class="footer col-af">
+    <div class="col-af-content clearfix">
+      <div>
+        <a href="https://www.tglsolutions.com.br" class="logo" title="Fante">
+          <img src="images/logo-alt.png" alt="Logo - Footer">
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61572792345451" target="_blank" rel="noopener" title="Facebook" class="social">
-          <svg width="32" height="32" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path></svg>
+        <p class="privacy">TGL Solutions © 2021 - 2024</p><br>
+        <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" title="Política de privacidade"
+          class="privacy">Política de privacidade</a>
+      </div>
+      <div>
+        <span class="title-common" style="color: #0F6CBD;">Onde estamos</span>
+        <p>Avenida Paulista, 1106<br>
+          São Paulo - SP, 01310-100
+          <a href="https://maps.app.goo.gl/kkERgmvi9crFVY6g8" target="_blank" rel="noopener" title="Ver mapa"
+            style="color: #0F6CBD;">Ver mapa</a>
+        </p>
+      </div>
+      <div>
+        <span class="title-common" style="color: #0F6CBD;">Redes sociais</span>
+        <a href="https://www.instagram.com/tglsolutions/" target="_blank" rel="noopener" title="Instagram"
+          class="social">
+          <svg width="32" height="32" viewBox="0 0 256 256">
+            <path
+              d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z">
+            </path>
+          </svg>
         </a>
-        <a href="https://api.whatsapp.com/send?phone=5511975678074" target="_blank" rel="noopener" title="Whatsapp" class="social">
+        <a href="https://www.facebook.com/profile.php?id=61572792345451" target="_blank" rel="noopener" title="Facebook"
+          class="social">
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <path
+              d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5511975678074" target="_blank" rel="noopener" title="Whatsapp"
+          class="social">
           <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#25D366">
-            <path d="M17.472 14.437c-.297-.149-1.758-.867-2.029-.965-.271-.099-.468-.148-.666.149-.198.297-.763.964-.935 1.162-.171.198-.345.223-.642.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.133-.132.297-.346.445-.519.148-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.666-1.612-.915-2.223-.241-.579-.485-.501-.666-.511-.173-.007-.372-.009-.571-.009-.198 0-.519.074-.791.372s-1.039 1.016-1.039 2.479 1.065 2.876 1.214 3.074c.149.198 2.104 3.22 5.096 4.513.713.308 1.268.493 1.701.63.714.228 1.364.196 1.878.119.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z"/>
-            <path d="M12.007 2.002c-5.522 0-9.995 4.477-9.995 9.998a9.9 9.9 0 0 0 1.366 5.04L2 22l5.093-1.362a9.965 9.965 0 0 0 4.914 1.274c5.522 0 9.995-4.477 9.995-9.998s-4.473-9.998-9.995-9.998zm0 18.355c-1.679 0-3.318-.444-4.759-1.282l-.341-.203-3.018.807.81-2.941-.223-.352A7.93 7.93 0 0 1 4.013 12c0-4.412 3.589-8.001 7.994-8.001 4.405 0 7.994 3.589 7.994 8.001s-3.589 8.001-7.994 8.001z"/>
-          </svg>          
+            <path
+              d="M17.472 14.437c-.297-.149-1.758-.867-2.029-.965-.271-.099-.468-.148-.666.149-.198.297-.763.964-.935 1.162-.171.198-.345.223-.642.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.133-.132.297-.346.445-.519.148-.174.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.666-1.612-.915-2.223-.241-.579-.485-.501-.666-.511-.173-.007-.372-.009-.571-.009-.198 0-.519.074-.791.372s-1.039 1.016-1.039 2.479 1.065 2.876 1.214 3.074c.149.198 2.104 3.22 5.096 4.513.713.308 1.268.493 1.701.63.714.228 1.364.196 1.878.119.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z" />
+            <path
+              d="M12.007 2.002c-5.522 0-9.995 4.477-9.995 9.998a9.9 9.9 0 0 0 1.366 5.04L2 22l5.093-1.362a9.965 9.965 0 0 0 4.914 1.274c5.522 0 9.995-4.477 9.995-9.998s-4.473-9.998-9.995-9.998zm0 18.355c-1.679 0-3.318-.444-4.759-1.282l-.341-.203-3.018.807.81-2.941-.223-.352A7.93 7.93 0 0 1 4.013 12c0-4.412 3.589-8.001 7.994-8.001 4.405 0 7.994 3.589 7.994 8.001s-3.589 8.001-7.994 8.001z" />
+          </svg>
         </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<div class="cookies-container">
+  <div class="cookies-container">
     <div class="cookies-content clearfix">
-      <p>Utilizamos cookies para melhorar a sua experiência em nosso site. Ao continuar navegando você concorda com a nossa <a href="https://www.tglsolutions.com.br/politica-de-privacidade/" title="Política de privacidade">política de privacidade</a>.</p>
+      <p>Utilizamos cookies para melhorar a sua experiência em nosso site. Ao continuar navegando você concorda com a
+        nossa <a href="https://www.tglsolutions.com.br/politica-de-privacidade/"
+          title="Política de privacidade">política de privacidade</a>.</p>
       <div class="cookies-pref">
         <label><input type="checkbox" checked="" data-function="analytics">Análise de Uso</label>
         <label><input type="checkbox" checked="" data-function="marketing">Marketing</label>
       </div>
       <button class="cookies-save">Continuar e fechar</button>
     </div>
-</div>
+  </div>
 
-<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/jquery-3.4.1.js?ver=1728671652" data-rocket-defer="" defer=""></script>
+  <script type="rocketlazyloadscript" data-minify="1"
+    data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/jquery-3.4.1.js?ver=1728671652"
+    data-rocket-defer="" defer=""></script>
 
-<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/words.js?ver=1728671652" data-rocket-defer="" defer=""></script>
+  <script type="rocketlazyloadscript" data-minify="1"
+    data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/words.js?ver=1728671652"
+    data-rocket-defer="" defer=""></script>
 
 
 
-<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/owl.carousel.js?ver=1728671652" data-rocket-defer="" defer=""></script>
-<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/main.js?ver=1728671652" data-rocket-defer="" defer=""></script>
-<script data-minify="1" nowprocket="" src="js/loader.js" data-rocket-defer="" defer=""></script>
+  <script type="rocketlazyloadscript" data-minify="1"
+    data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/owl.carousel.js?ver=1728671652"
+    data-rocket-defer="" defer=""></script>
+  <script type="rocketlazyloadscript" data-minify="1"
+    data-rocket-src="https://www.agenciafante.com.br/wp-content/cache/min/1/wp-content/themes/fante/js/main.js?ver=1728671652"
+    data-rocket-defer="" defer=""></script>
+  <script data-minify="1" nowprocket="" src="js/loader.js" data-rocket-defer="" defer=""></script>
 
-<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+  <script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
 /* <![CDATA[ */
 "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
 /* ]]> */
 </script>
-<script type="text/javascript" id="rocket-preload-links-js-extra">
-/* <![CDATA[ */
-var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.agenciafante.com.br","onHoverDelay":"100","rateThrottle":"3"};
-/* ]]> */
-</script>
-<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+  <script type="text/javascript" id="rocket-preload-links-js-extra">
+    /* <![CDATA[ */
+    var RocketPreloadLinksConfig = { "excludeUris": "\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https:\/\/www.agenciafante.com.br", "onHoverDelay": "100", "rateThrottle": "3" };
+    /* ]]> */
+  </script>
+  <script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
 /* <![CDATA[ */
 (function() {
 "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
 }());
 /* ]]> */
 </script>
-<script type="text/javascript" id="rocket_lazyload_css-js-extra">
-/* <![CDATA[ */
-var rocket_lazyload_css_data = {"threshold":"300"};
-/* ]]> */
-</script>
-<script type="text/javascript" id="rocket_lazyload_css-js-after">
-/* <![CDATA[ */
-!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
-//# sourceMappingURL=lazyload-css.min.js.map
-/* ]]> */
-</script>
-<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
-if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
-images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
-if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="js/lazyload.min.js"></script>
+  <script type="text/javascript" id="rocket_lazyload_css-js-extra">
+    /* <![CDATA[ */
+    var rocket_lazyload_css_data = { "threshold": "300" };
+    /* ]]> */
+  </script>
+  <script type="text/javascript" id="rocket_lazyload_css-js-after">
+    /* <![CDATA[ */
+    !function o(n, c, a) { function u(t, e) { if (!c[t]) { if (!n[t]) { var r = "function" == typeof require && require; if (!e && r) return r(t, !0); if (s) return s(t, !0); throw (e = new Error("Cannot find module '" + t + "'")).code = "MODULE_NOT_FOUND", e } r = c[t] = { exports: {} }, n[t][0].call(r.exports, function (e) { return u(n[t][1][e] || e) }, r, r.exports, o, n, c, a) } return c[t].exports } for (var s = "function" == typeof require && require, e = 0; e < a.length; e++)u(a[e]); return u }({ 1: [function (e, t, r) { "use strict"; { const c = "undefined" == typeof rocket_pairs ? [] : rocket_pairs, a = (("undefined" == typeof rocket_excluded_pairs ? [] : rocket_excluded_pairs).map(t => { var e = t.selector; document.querySelectorAll(e).forEach(e => { e.setAttribute("data-rocket-lazy-bg-" + t.hash, "excluded") }) }), document.querySelector("#wpr-lazyload-bg-container")); var o = rocket_lazyload_css_data.threshold || 300; const u = new IntersectionObserver(e => { e.forEach(t => { t.isIntersecting && c.filter(e => t.target.matches(e.selector)).map(t => { var e; t && ((e = document.createElement("style")).textContent = t.style, a.insertAdjacentElement("afterend", e), t.elements.forEach(e => { u.unobserve(e), e.setAttribute("data-rocket-lazy-bg-" + t.hash, "loaded") })) }) }) }, { rootMargin: o + "px" }); function n() { 0 < (0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : []).length && c.forEach(t => { try { document.querySelectorAll(t.selector).forEach(e => { "loaded" !== e.getAttribute("data-rocket-lazy-bg-" + t.hash) && "excluded" !== e.getAttribute("data-rocket-lazy-bg-" + t.hash) && (u.observe(e), (t.elements ||= []).push(e)) }) } catch (e) { console.error(e) } }) } n(), function () { const r = window.MutationObserver; return function (e, t) { if (e && 1 === e.nodeType) return (t = new r(t)).observe(e, { attributes: !0, childList: !0, subtree: !0 }), t } }()(document.querySelector("body"), n) } }, {}] }, {}, [1]);
+    //# sourceMappingURL=lazyload-css.min.js.map
+    /* ]]> */
+  </script>
+  <script>window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
+      var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+        var observer = new MutationObserver(function (mutations) {
+          var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+            for (var i = 0; i < mutation.addedNodes.length; i++) {
+              if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+              if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+              images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+              if (is_iframe) { iframe_count += 1 }
+            }
+          }); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+        }); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+      }
+    }, !1)</script>
+  <script data-no-minify="1" async="" src="js/lazyload.min.js"></script>
 
 
-</body></html><!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1732103473 -->
+</body>
+
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1732103473 -->
