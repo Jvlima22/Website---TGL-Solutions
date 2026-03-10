@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -418,6 +418,7 @@
 
       <a href="https://www.tglsolutions.com.br" class="logo" title="TGL Solutions">
         <img src="images/logo.png" alt="Logo Original" class="logo-default">
+        <img src="images/logo-alt.png" alt="Logo Alternativo" class="logo-scroll">
       </a>
 
       <input type="checkbox" name="toggle-menu" id="toggle-menu" class="toggle-menu">
@@ -972,8 +973,35 @@
       }
     }, !1)</script>
   <script data-no-minify="1" async="" src="js/lazyload.min.js"></script>
+  <script>
+    // Função para alternar os logos com base no scroll
+    window.addEventListener('scroll', function () {
+      const logoDefault = document.querySelector('.logo-default');
+      const logoScroll = document.querySelector('.logo-scroll');
 
+      if (window.scrollY > 50) {
+        logoDefault.style.display = 'none';  // Esconde o logo original
+        logoScroll.style.display = 'block';  // Exibe o logo alternativo
+      } else {
+        logoDefault.style.display = 'block';  // Exibe o logo original
+        logoScroll.style.display = 'none';  // Esconde o logo alternativo
+      }
+    });
 
+    // Inicializa o estado dos logos quando a página carrega
+    document.addEventListener('DOMContentLoaded', function () {
+      const logoDefault = document.querySelector('.logo-default');
+      const logoScroll = document.querySelector('.logo-scroll');
+
+      if (window.scrollY > 50) {
+        logoDefault.style.display = 'none';
+        logoScroll.style.display = 'block';
+      } else {
+        logoDefault.style.display = 'block';
+        logoScroll.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
